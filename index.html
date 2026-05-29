@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUXERIS | Corporate Gifting Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -24,59 +22,66 @@
             <h1 class="text-2xl lg:text-3xl font-serif tracking-[0.2em] text-yellow-700 font-semibold">LUXERIS</h1>
             <p class="text-[10px] uppercase tracking-[0.3em] text-gray-500 mt-1">Corporate Gifting Solutions</p>
         </a>
-        <div class="hidden lg:flex items-center gap-6 text-sm font-medium text-gray-700 mr-6">
+        <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-gray-700">
             <a href="#about" class="hover:text-yellow-700 transition">About Us</a>
-            <span class="flex items-center gap-2">📞 +91 9819983123</span>
-            <span class="flex items-center gap-2">✉️ luxerisgifting@gmail.com</span>
+            <a href="#products" class="hover:text-yellow-700 transition">Collection</a>
+            <a href="tel:+919819983123" class="hover:text-yellow-700 transition">📞 +91 9819983123</a>
         </div>
-        <a href="javascript:void(0)" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-gradient-to-r from-yellow-700 via-yellow-500 to-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition">Get Quote</a>
+        <a href="#contact" class="bg-yellow-500 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-600 transition shadow-lg">Get Quote</a>
     </nav>
 
-    <section class="min-h-screen flex items-center justify-center relative px-6 lg:px-16 py-32 bg-gradient-to-br from-[#fffdf7] via-[#faf6e8] to-[#fff8e7] overflow-hidden">
-        <div class="absolute w-[700px] h-[700px] rounded-full border border-yellow-100"></div>
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 border border-yellow-300 bg-yellow-50 text-yellow-700 uppercase tracking-[0.3em] text-xs px-6 py-2 rounded-full mb-8">✦ Premium Corporate Gifting ✦</div>
-            <h1 class="text-5xl lg:text-7xl font-serif font-light leading-tight">Gifts That Create<br><span class="text-yellow-700 italic">Lasting Impressions</span></h1>
-            <p class="max-w-2xl mx-auto text-lg text-gray-600 leading-8 mt-8">Customized premium gifting solutions for employees, clients, corporate events, festive gifting and brand promotions.</p>
-            <div class="mt-10 flex flex-wrap justify-center gap-5">
-                <a href="javascript:void(0)" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})" class="bg-gradient-to-r from-yellow-700 via-yellow-500 to-yellow-400 text-black px-8 py-4 rounded-full font-semibold shadow-xl hover:scale-105 transition">Explore Collection</a>
-                <a href="https://wa.me/919819983123?text=Hello%20Luxeris%2C%20I%20am%20interested%20in%20corporate%20gifting%20solutions." target="_blank" class="border border-yellow-400 px-8 py-4 rounded-full hover:bg-yellow-50 transition">WhatsApp Us</a>
+    <section class="min-h-screen flex items-center justify-center px-6 pt-20">
+        <div class="text-center">
+            <h1 class="text-5xl lg:text-7xl font-serif leading-tight">Gifts That Create<br><span class="text-yellow-700 italic">Lasting Impressions</span></h1>
+            <p class="max-w-xl mx-auto text-lg text-gray-600 mt-8">Customized premium gifting solutions for employees, clients, and corporate events.</p>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-serif text-center mb-12">About LUXERIS</h2>
+            <div class="text-lg text-gray-600 space-y-6">
+                <p>With over 22 years of experience at <strong>Bhuleshwar Lane No. 3, Mumbai</strong>, we specialize in premium corporate gifting.</p>
+                <p>At LUXERIS, we believe every gift represents appreciation and brand value — and we ensure it leaves a lasting impression.</p>
             </div>
         </div>
     </section>
 
-    <section class="bg-[#1C1610] text-yellow-300 py-5 px-6 text-center uppercase tracking-[0.25em] text-xs">
-        <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-10">
-            <span>✦ Custom Branding</span><span>✦ Bulk Orders</span><span>✦ Premium Quality</span><span>✦ Fast Delivery</span>
-        </div>
-    </section>
+    <section id="products" class="py-24 px-6 bg-[#faf8f3]">
+        <div class="text-center mb-16"><h2 class="text-5xl font-serif">Premium Collection</h2></div>
+        </section>
 
-    <section id="about" class="py-24 px-6 lg:px-16 bg-white">
-        <div class="max-w-4xl mx-auto text-left">
-            <p class="uppercase tracking-[0.35em] text-xs text-yellow-700 mb-4 text-center">✦ About Us ✦</p>
-            <h2 class="text-5xl font-serif font-light mb-8 text-center">The LUXERIS Legacy</h2>
-            <div class="text-lg text-gray-600 leading-relaxed space-y-6">
-                <p>With over 22 years of experience in the gifting industry at <strong>Bhuleshwar Lane No. 3, Mumbai</strong>, we have built strong expertise in premium gifting, customized products, and trusted client relationships.</p>
-                <p>We specialize in corporate gifting, event gifting, wedding hampers, return gifts, branded merchandise, executive gift sets, mugs, apparel, trophies, desk accessories, and personalized gifting solutions — all curated with a strong focus on quality, presentation, and timely delivery.</p>
-                <p>After years of serving clients through our offline presence, we started <strong>LUXERIS</strong> online to make premium and customized gifting solutions more accessible across Mumbai and beyond.</p>
-                <p class="font-semibold italic text-yellow-800 border-l-4 border-yellow-700 pl-4">At LUXERIS, we believe every gift represents appreciation, relationships, and brand value — and we ensure it leaves a lasting impression.</p>
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto bg-white p-10 lg:p-16 rounded-[40px] shadow-2xl border border-yellow-100">
+            <h2 class="text-5xl font-serif text-center mb-12">Request a Quote</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <input type="text" id="name" placeholder="Your Name" class="bg-[#faf8f3] border p-4 rounded-2xl w-full outline-none">
+                <input type="text" id="company" placeholder="Company Name" class="bg-[#faf8f3] border p-4 rounded-2xl w-full outline-none">
+                <input type="text" id="whatsapp" placeholder="WhatsApp Number" class="bg-[#faf8f3] border p-4 rounded-2xl w-full outline-none">
+                <input type="email" id="email" placeholder="Email Address" class="bg-[#faf8f3] border p-4 rounded-2xl w-full outline-none">
             </div>
+            <textarea id="msg" placeholder="Your Requirements..." rows="5" class="mt-8 w-full bg-[#faf8f3] border p-4 rounded-2xl outline-none"></textarea>
+            <button onclick="sendWhatsApp()" class="mt-8 w-full bg-yellow-500 py-5 rounded-2xl font-bold text-black">Send Enquiry via WhatsApp</button>
         </div>
     </section>
 
-    <section id="products" class="py-24 px-6 lg:px-16 bg-[#faf8f3]">
-        <div class="text-center mb-16"><p class="uppercase tracking-[0.35em] text-xs text-yellow-700 mb-4">✦ Our Collection ✦</p><h2 class="text-5xl font-serif font-light">Premium Corporate Gifts</h2></div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div onclick="openProductModal('Executive Corporate Gift Sets', 'giftset.jpeg')" class="cursor-pointer bg-white border border-yellow-100 rounded-[30px] p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"><img src="giftset.jpeg" alt="Executive Corporate Gift Sets" class="w-full h-[240px] object-contain bg-white rounded-[24px] shadow-lg border border-yellow-100"><h3 class="mt-8 text-2xl font-serif font-semibold h-16 flex items-center">Executive Corporate Gift Sets</h3></div>
-            <div onclick="openProductModal('Metal Keychains', 'keychain.jpg')" class="cursor-pointer bg-white border border-yellow-100 rounded-[30px] p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"><img src="keychain.jpg" alt="Metal Keychains" class="w-full h-[240px] object-contain bg-white rounded-[24px] shadow-lg border border-yellow-100"><h3 class="mt-8 text-2xl font-serif font-semibold h-16 flex items-center">Metal Keychains</h3></div>
-            <div onclick="openProductModal('Corporate Umbrellas', 'umbrella.jpg')" class="cursor-pointer bg-white border border-yellow-100 rounded-[30px] p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"><img src="umbrella.jpg" alt="Corporate Umbrellas" class="w-full h-[240px] object-contain bg-white rounded-[24px] shadow-lg border border-yellow-100"><h3 class="mt-8 text-2xl font-serif font-semibold h-16 flex items-center">Corporate Umbrellas</h3></div>
-            <div onclick="openProductModal('Coffee Mugs', 'mugs.jpg')" class="cursor-pointer bg-white border border-yellow-100 rounded-[30px] p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"><img src="mugs.jpg" alt="Coffee Mugs" class="w-full h-[240px] object-contain bg-white rounded-[24px] shadow-lg border border-yellow-100"><h3 class="mt-8 text-2xl font-serif font-semibold h-16 flex items-center">Coffee Mugs</h3></div>
-            <div onclick="openProductModal('Customised T-Shirts', 'tshirt.jpg')" class="cursor-pointer bg-white border border-yellow-100 rounded-[30px] p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"><img src="tshirt.jpg" alt="Customised T-Shirts" class="w-full h-[240px] object-contain bg-white rounded-[24px] shadow-lg border border-yellow-100"><h3 class="mt-8 text-2xl font-serif font-semibold h-16 flex items-center">Customised T-Shirts</h3></div>
-            <div onclick="openProductModal('Wooden Digital Clock Stand', 'clockstand.jpg')" class="cursor-pointer bg-white border border-yellow-100 rounded-[30px] p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300"><img src="clockstand.jpg" alt="Wooden Digital Clock Stand" class="w-full h-[240px] object-contain bg-white rounded-[24px] shadow-lg border border-yellow-100"><h3 class="mt-8 text-2xl font-serif font-semibold h-16 flex items-center">Wooden Digital Clock Stand</h3></div>
-        </div>
-    </section>
+    <footer class="bg-[#1C1610] text-center py-16 text-yellow-100">
+        <p>© 2026 LUXERIS. All rights reserved.</p>
+    </footer>
 
-    <div id="productModal" class="hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white p-8 rounded-[30px] max-w-lg w-full relative shadow-2xl">
-            <button onclick="closeProductModal()" class="absolute top-4 right-4 text-3xl text-gray-500 hover:text-black">&times;</button>
-            <h4 id="modalTitle" class="text-2xl
+    <script>
+        function sendWhatsApp() {
+            const name = document.getElementById('name').value;
+            const company = document.getElementById('company').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            const msg = document.getElementById('msg').value;
+
+            if(!name || !email || !msg) { alert("Please fill in the required fields."); return; }
+
+            const text = `*New Inquiry*%0A%0AName: ${name}%0ACompany: ${company}%0AWhatsApp: ${whatsapp}%0AEmail: ${email}%0A%0AMessage: ${msg}`;
+            window.open(`https://wa.me/919819983123?text=${text}`, '_blank');
+        }
+    </script>
+</body>
+</html>
