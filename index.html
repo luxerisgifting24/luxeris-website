@@ -8,32 +8,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
     <style>body { font-family: 'Plus Jakarta Sans', sans-serif; } .font-serif { font-family: 'Playfair Display', serif; }</style>
 </head>
-<body class="bg-[#fffdf7] text-[#1C1610] overflow-x-hidden">
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-yellow-100 px-6 lg:px-16 py-4 flex items-center justify-between shadow-sm">
-        <div><h1 class="text-2xl lg:text-3xl font-serif tracking-[0.2em] text-yellow-700 font-semibold">LUXERIS</h1></div>
-        <a href="#contact" class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full">Get Quote</a>
+<body class="bg-[#fffdf7] text-[#1C1610]">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-yellow-100 px-6 py-4 flex items-center justify-between">
+        <h1 class="text-2xl font-serif text-yellow-700">LUXERIS</h1>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-yellow-500 px-6 py-2 rounded-full font-bold">Get Quote</button>
     </nav>
 
-    <section class="min-h-[60vh] flex items-center justify-center pt-32 px-6 text-center">
-        <div><h1 class="text-5xl lg:text-7xl font-serif">Gifts That Create<br><span class="text-yellow-700 italic">Lasting Impressions</span></h1></div>
+    <section class="pt-32 pb-16 px-6 text-center">
+        <h1 class="text-5xl font-serif">Gifts That Create<br><span class="text-yellow-700 italic">Lasting Impressions</span></h1>
     </section>
 
-    <section id="products" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-4xl font-serif text-center mb-12">Our Collection</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="bg-white p-4 rounded-xl shadow"><img src="clockstand.jpg" class="w-full h-48 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Clock Stand</h3></div>
-            <div class="bg-white p-4 rounded-xl shadow"><img src="giftset.jpeg" class="w-full h-48 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Gift Set</h3></div>
-            <div class="bg-white p-4 rounded-xl shadow"><img src="keychain.jpg" class="w-full h-48 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Keychain</h3></div>
-            <div class="bg-white p-4 rounded-xl shadow"><img src="mugs.jpg" class="w-full h-48 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Coffee Mugs</h3></div>
-            <div class="bg-white p-4 rounded-xl shadow"><img src="tshirt.jpg" class="w-full h-48 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">T-Shirt</h3></div>
-            <div class="bg-white p-4 rounded-xl shadow"><img src="umbrella.jpg" class="w-full h-48 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Umbrella</h3></div>
+    <section id="products" class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div onclick="openModal('Clock Stand', 'clockstand.jpg')" class="cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg transition"><img src="clockstand.jpg" class="w-full h-64 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Clock Stand</h3></div>
+            <div onclick="openModal('Gift Set', 'giftset.jpeg')" class="cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg transition"><img src="giftset.jpeg" class="w-full h-64 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Gift Set</h3></div>
+            <div onclick="openModal('Keychain', 'keychain.jpg')" class="cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg transition"><img src="keychain.jpg" class="w-full h-64 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Keychain</h3></div>
+            <div onclick="openModal('Coffee Mugs', 'mugs.jpg')" class="cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg transition"><img src="mugs.jpg" class="w-full h-64 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Coffee Mugs</h3></div>
+            <div onclick="openModal('T-Shirt', 'tshirt.jpg')" class="cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg transition"><img src="tshirt.jpg" class="w-full h-64 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">T-Shirt</h3></div>
+            <div onclick="openModal('Corporate Umbrella', 'umbrella.jpg')" class="cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg transition"><img src="umbrella.jpg" class="w-full h-64 object-cover rounded-lg"><h3 class="mt-4 text-center font-bold">Corporate Umbrella</h3></div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-white text-center px-6">
-        <h2 class="text-3xl font-serif mb-6">Contact Us</h2>
-        <p class="text-lg">For orders, call: <strong>+91 9819983123</strong></p>
-        <p class="text-lg">Email: <strong>luxerisgifting@gmail.com</strong></p>
+    <section id="contact" class="py-20 bg-white text-center px-6">
+        <h2 class="text-3xl font-serif mb-8">Get A Quote</h2>
+        <p class="text-xl">Call: <strong>+91 9819983123</strong></p>
+        <p class="text-xl">Email: <strong>luxerisgifting@gmail.com</strong></p>
     </section>
+
+    <div id="modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-[100]" onclick="closeModal()">
+        <div class="bg-white p-6 rounded-2xl max-w-lg w-full" onclick="event.stopPropagation()">
+            <h2 id="modalTitle" class="text-2xl font-bold mb-4"></h2>
+            <img id="modalImg" class="w-full h-auto rounded-lg mb-4">
+            <button onclick="closeModal()" class="w-full bg-yellow-500 py-3 rounded-lg font-bold">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, src) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modal').classList.remove('hidden');
+        }
+        function closeModal() { document.getElementById('modal').classList.add('hidden'); }
+    </script>
 </body>
 </html>
