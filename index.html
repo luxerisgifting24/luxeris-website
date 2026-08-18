@@ -296,7 +296,7 @@
             </div>
 
             <!-- PRODUCT 6 -->
-            <div onclick="openProductModal('Premium Trophies & Mementos', 'trophies.jpg')"
+            <div onclick="openProductModal('Premium Trophies & Mementos', 'trophies.jpg', 'luxeris_video_gold_endcard.mp4')"
                  class="cursor-pointer bg-white border border-yellow-100 rounded-[30px] p-8 hover:-translate-y-2 hover:shadow-2xl transition duration-300">
 
                 <img src="trophies.jpg"
@@ -310,6 +310,36 @@
 
         </div>
     </section>
+    <!-- LENTICULAR LUGGAGE TAGS -->
+<section class="py-20 px-6 lg:px-16 bg-[#fffdf7]">
+    <div class="max-w-6xl mx-auto text-center">
+
+        <div class="text-sm tracking-[0.35em] text-yellow-700 mb-4">
+            ✦ NEW COLLECTION ✦
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-serif font-semibold mb-4">
+            Customised Lenticular Luggage Tags
+        </h2>
+
+        <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+            Make your brand stand out with eye-catching customised luggage tags.
+        </p>
+
+        <div class="max-w-4xl mx-auto bg-white border border-yellow-100 rounded-[30px] p-4 md:p-6 shadow-lg">
+            <video
+                controls
+                playsinline
+                preload="metadata"
+                class="w-full max-h-[520px] rounded-[20px] object-contain"
+            >
+                <source src="luxeris_video_gold_endcard.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+        </div>
+
+    </div>
+</section>
 
     <!-- PRODUCT MODAL -->
     <div id="productModal"
@@ -328,6 +358,9 @@
      src=""
      alt="Product"
      class="w-full max-w-[1100px] h-auto max-h-[75vh] object-scale-down mx-auto mb-6 border border-yellow-100 rounded-2xl bg-white p-2 shadow-lg">
+            <video id="modalVideo" controls playsinline class="w-full max-w-[1100px] h-auto max-h-[75vh] object-contain mx-auto mb-6 rounded-xl">
+    <source src="luxeris_video_gold_endcard.mp4" type="video/mp4">
+</video>
 
             <button onclick="closeProductModal(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
                     class="w-full bg-yellow-500 py-4 rounded-full font-bold hover:bg-yellow-600 transition">
@@ -461,10 +494,13 @@
             window.open(whatsappUrl, '_blank');
         }
 
-        function openProductModal(title, imageSrc) {
+        function openProductModal(title, imageSrc, videoSrc = '') {
 
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalVideo').querySelector('source').src = videoSrc;
+document.getElementById('modalVideo').load();
+document.getElementById('modalVideo').style.display = videoSrc ? 'block' : 'none';
 
             document.getElementById('productModal').classList.remove('hidden');
 
