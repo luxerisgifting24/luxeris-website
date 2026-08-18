@@ -343,11 +343,14 @@
      src=""
      alt="Product"
      class="max-w-full max-h-[55vh] w-auto h-auto object-contain rounded-[20px] mx-auto mb-6">
-            <video id="modalVideo" controls playsinline class="w-full max-w-[1100px] h-auto max-h-[75vh] object-contain mx-auto mb-6 rounded-xl">
+            <video id="modalVideo" playsinline autoplay muted class="w-full max-w-[1100px] h-auto max-h-[75vh] object-contain mx-auto">
     <source src="luxeris_video_gold_endcard.mp4" type="video/mp4">
 </video>
 
-            <button onclick="closeProductModal(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
+           <button onclick="shareProduct()"
+        class="w-full bg-gray-100 py-4 rounded-full font-bold hover:bg-gray-200 transition mb-3">
+    ↗ Share
+</button> <button onclick="closeProductModal(); document.getElementById('contact').scrollIntoView({behavior: 'smooth'})"
                     class="w-full bg-yellow-500 py-4 rounded-full font-bold hover:bg-yellow-600 transition">
 
                 Inquire Now
@@ -516,6 +519,23 @@
 
     document.getElementById('productModal').classList.remove('hidden');
     document.body.style.overflow = 'hidden';
+}
+        function shareProduct() {
+    const productTitle = document.getElementById('modalTitle').innerText;
+    const shareUrl = window.location.href;
+
+    if (navigator.share) {
+        navigator.share({
+            title: productTitle,
+            text: 'Check out this product from Luxeris Corporate Gifting.',
+            url: shareUrl
+        });
+    } else {
+        const whatsappUrl = 'https://wa.me/?text=' +
+            encodeURIComponent(productTitle + ' - Check out this product from Luxeris Corporate Gifting: ' + shareUrl);
+
+        window.open(whatsappUrl, '_blank');
+    }
 }
         function closeProductModal() {
     const modalVideo = document.getElementById('modalVideo');
