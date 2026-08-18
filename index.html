@@ -479,25 +479,53 @@
             window.open(whatsappUrl, '_blank');
         }
 
-        function openProductModal(title, imageSrc, videoSrc = '') {
+       function openProductModal(title, imageSrc, videoSrc = '') {
 
-            document.getElementById('modalTitle').innerText = title;
-            document.getElementById('modalImage').src = imageSrc;
-            document.getElementById('modalVideo').querySelector('source').src = videoSrc;
-document.getElementById('modalVideo').load();
-document.getElementById('modalVideo').style.display = videoSrc ? 'block' : 'none';
+    document.getElementById('modalTitle').innerText = title;
 
-            document.getElementById('productModal').classList.remove('hidden');
+    const modalImage = document.getElementById('modalImage');
+    const modalVideo = document.getElementById('modalVideo');
+    const videoSource = modalVideo.querySelector('source');
 
-            document.body.style.overflow = 'hidden';
-        }
+    if (videoSrc) {
 
+        // For products with video: show ONLY the video
+        modalImage.style.display = 'none';
+
+        videoSource.src = videoSrc;
+        modalVideo.load();
+
+        modalVideo.style.display = 'block';
+        modalVideo.muted = true;
+        modalVideo.autoplay = true;
+        modalVideo.playsInline = true;
+
+        modalVideo.play().catch(() => {
+            // Browser may block autoplay until user interacts
+        });
+
+    } else {
+
+        // For normal products: show ONLY the image
+        modalVideo.pause();
+        modalVideo.style.display = 'none';
+
+        modalImage.src = imageSrc;
+        modalImage.style.display = 'block';
+    }
+
+    document.getElementById('productModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
         function closeProductModal() {
+    const modalVideo = document.getElementById('modalVideo');
 
-            document.getElementById('productModal').classList.add('hidden');
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
 
-            document.body.style.overflow = 'auto';
-        }
+    document.getElementById('productModal').classList.add('hidden');
+    document.body.style.overflow = '';
+}
 
     </script>
 
