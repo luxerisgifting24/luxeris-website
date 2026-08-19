@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luxeris | Corporate Gifting in Mumbai</title>
-  <meta name="description" content="Premium corporate gifting in Mumbai — executive gift sets, festive hampers, branded merchandise, trophies and custom gifts. Quotes from Kamothe, Navi Mumbai. Pan-India delivery.">
+  <meta name="description" content="Premium corporate gifting in Mumbai: executive gift sets, festive hampers, branded merchandise, trophies and custom gifts. Quotes from Kamothe, Navi Mumbai. Pan-India delivery.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://luxerisgifting.in/">
   <meta property="og:title" content="Luxeris | Corporate Gifting in Mumbai">
@@ -23,7 +23,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Luxeris",
-    "description": "Corporate gifting solutions in Mumbai — premium hampers, executive sets and branded merchandise.",
+    "description": "Corporate gifting solutions in Mumbai: premium hampers, executive sets and branded merchandise.",
     "url": "https://luxerisgifting.in/",
     "telephone": "+919820810040",
     "email": "luxerisgifting@gmail.com",
@@ -58,7 +58,7 @@
     img { max-width: 100%; display: block; }
     a { color: inherit; }
     button, [role="button"] { cursor: pointer; font-family: inherit; }
-    .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .wrap { width: min(1280px, calc(100% - 48px)); margin-inline: auto; }
     .serif { font-family: "Cormorant Garamond", Georgia, serif; }
 
     nav {
@@ -68,20 +68,21 @@
       border-bottom: 1px solid var(--line);
     }
     .nav-inner {
-      width: min(1160px, calc(100% - 32px));
+      width: min(1280px, calc(100% - 32px));
       margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
-      min-height: 72px; gap: 16px;
+      min-height: 80px; gap: 16px;
     }
     .brand { text-decoration: none; }
     .brand h1 {
       font-family: "Cormorant Garamond", serif;
-      letter-spacing: .28em;
-      font-size: 1.35rem;
+      letter-spacing: .32em;
+      font-size: clamp(1.55rem, 2.2vw, 2.05rem);
       font-weight: 600;
       color: var(--gold-deep);
+      line-height: 1.1;
     }
-    .brand p { font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    .brand p { font-size: clamp(.64rem, .7vw, .78rem); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-top: 2px; }
     .nav-links { display: flex; gap: 22px; align-items: center; }
     .nav-links a { text-decoration: none; font-size: .92rem; color: var(--muted); }
     .nav-links a:hover { color: var(--ink); }
@@ -102,7 +103,8 @@
 
     .hero {
       display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px;
-      align-items: center; padding: 72px 0 80px;
+      align-items: center;
+      padding: 48px 0 64px;
     }
     .eyebrow {
       display: inline-block; letter-spacing: .22em; text-transform: uppercase;
@@ -111,12 +113,21 @@
     }
     h2.display, .display {
       font-family: "Cormorant Garamond", serif;
-      font-weight: 500; font-size: clamp(2.4rem, 5vw, 4.4rem);
+      font-weight: 500; font-size: clamp(2.15rem, 4.2vw, 4.6rem);
       line-height: 1.08; letter-spacing: -.02em;
     }
-    .hero p.lead { margin-top: 18px; color: var(--muted); font-size: 1.12rem; max-width: 34rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .hero-actions .btn { min-width: 0; max-width: 100%; }
+    .hero p.lead { margin-top: 16px; color: var(--muted); font-size: clamp(1rem, 1.15vw, 1.22rem); max-width: 36rem; }
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      margin-top: 24px; margin-bottom: 8px;
+      padding-bottom: 8px;
+    }
+    .hero-actions .btn {
+      min-width: 168px;
+      max-width: 100%;
+      padding: .9rem 1.4rem;
+      white-space: nowrap;
+    }
     .hero-meta { display: flex; gap: 22px; margin-top: 28px; color: var(--muted); font-size: .92rem; }
     .hero-img {
       border-radius: 28px; overflow: hidden;
@@ -231,27 +242,47 @@
     }
     .mobile-menu a { display: block; padding: 10px 0; text-decoration: none; color: var(--ink); }
 
+    @media (min-width: 1440px) {
+      .wrap, .nav-inner { width: min(1380px, calc(100% - 80px)); }
+      .card img { height: 300px; }
+      section { padding: 96px 0; }
+    }
     @media (max-width: 1100px) {
       .nav-links a:not(.btn) { font-size: .85rem; }
-      .nav-links { gap: 14px; }
+      .nav-links { gap: 12px; }
+      .prod-grid, .occ-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero { gap: 32px; padding: 36px 0 52px; }
     }
     @media (max-width: 900px) {
-      .hero, .about-grid, .occ-grid, .prod-grid, .step-grid, .rev-grid, .foot-grid, .row2 {
+      .hero, .about-grid, .step-grid, .rev-grid, .foot-grid, .row2 {
         grid-template-columns: 1fr;
       }
       .nav-links { display: none; }
       .hamburger { display: inline-block; }
-      .hero { padding: 36px 0 48px; }
+      .hero { padding: 28px 0 40px; }
       section { padding: 56px 0; }
-      .stat-row { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
       .card img { height: 220px; }
-      .hero-actions .btn { width: 100%; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-actions .btn { width: 100%; min-width: 0; white-space: normal; }
       .display { overflow-wrap: break-word; }
+      .hero-img { max-height: 360px; }
+    }
+    @media (max-width: 700px) {
+      .prod-grid, .occ-grid { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
       .wrap { width: calc(100% - 28px); }
+      .nav-inner { width: calc(100% - 20px); min-height: 68px; }
       .card img { height: 200px; padding: 6px; }
-      .btn { padding: .8rem 1.1rem; }
+      .btn { padding: .85rem 1.15rem; }
+      .wa { right: 14px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+    }
+    @media (max-height: 820px) and (min-width: 901px) {
+      .hero { padding: 28px 0 40px; gap: 32px; }
+      .hero-img { max-height: 420px; }
+      .hero-meta { margin-top: 16px; }
     }
   </style>
 </head>
@@ -287,7 +318,7 @@
   <header class="wrap hero" id="top">
     <div>
       <span class="eyebrow">Mumbai corporate gifting</span>
-      <h2 class="display">Gifts that feel considered — not catalogue leftover.</h2>
+      <h2 class="display">Gifts that feel considered, not catalogue leftover.</h2>
       <p class="lead">Executive sets, festive hampers and branded merchandise for Mumbai companies. Customised, quoted clearly, and dispatched across India from our Navi Mumbai base.</p>
       <div class="hero-actions">
         <a class="btn btn-gold" href="#collection">Browse collection</a>
@@ -315,8 +346,8 @@
       <h2 class="section-title">Built for Mumbai businesses that still gift with intent.</h2>
       <div class="about-grid">
         <div class="about-card">
-          <p>Luxeris is a Mumbai corporate gifting studio. We work with HR, admin, sales and event teams who need gifts that arrive on time and still feel premium — Diwali hampers, joining kits, conference bags, dealer meets and year-round client gifting.</p>
-          <p>We are based in Kamothe, Navi Mumbai, and serve companies across Mumbai, Navi Mumbai, Thane and the rest of India. Two decades in the gifting trade means we know what survives a bulk order — and what does not.</p>
+          <p>Luxeris is a Mumbai corporate gifting studio. We work with HR, admin, sales and event teams who need gifts that arrive on time and still feel premium: Diwali hampers, joining kits, conference bags, dealer meets and year-round client gifting.</p>
+          <p>We are based in Kamothe, Navi Mumbai, and serve companies across Mumbai, Navi Mumbai, Thane and the rest of India. Two decades in the gifting trade means we know what survives a bulk order, and what does not.</p>
           <p>Tell us the occasion, quantity and budget. We recommend, brand, pack and ship.</p>
           <div class="stat-row">
             <div class="stat"><b>22+</b> years in gifting</div>
@@ -335,7 +366,7 @@
       <h2 class="section-title">Diwali, day one, and everything in between.</h2>
       <div class="occ-grid">
         <article class="occ"><h3>Diwali &amp; festive</h3><p>Hampers and executive sets for employees, clients and channel partners. Plan early for Mumbai peak season.</p></article>
-        <article class="occ"><h3>Onboarding</h3><p>Welcome kits that make a new joiner feel looked after — notebooks, bottles, apparel and a note from the team.</p></article>
+        <article class="occ"><h3>Onboarding</h3><p>Welcome kits that make a new joiner feel looked after: notebooks, bottles, apparel and a note from the team.</p></article>
         <article class="occ"><h3>Conferences</h3><p>Delegate kits, badges, umbrellas, luggage tags and stage trophies for Mumbai and outstation events.</p></article>
         <article class="occ"><h3>Client &amp; dealer</h3><p>Premium sets that travel well and carry your brand without looking like cheap promo stock.</p></article>
         <article class="occ"><h3>Recognition</h3><p>Trophies, mementos and curated boxes for awards nights and milestone years.</p></article>
@@ -347,7 +378,7 @@
   <section id="collection">
     <div class="wrap">
       <p class="section-kicker">Collection</p>
-      <h2 class="section-title">Request a quote — no cart, no guesswork.</h2>
+      <h2 class="section-title">Request a quote. No cart, no guesswork.</h2>
       <p style="color:var(--muted);margin-top:10px;max-width:40rem">Prices depend on quantity, branding and finish. We quote after a short brief. Product photos include representative samples.</p>
       <div class="prod-grid">
         <article class="card">
@@ -364,7 +395,7 @@
           <div class="body">
             <p class="price">Price on request</p>
             <h3>Executive gift sets</h3>
-            <p>Bottle, planner, pen and accessory sets — colour-matched and logo-ready for bulk.</p>
+            <p>Bottle, planner, pen and accessory sets, colour-matched and logo-ready for bulk.</p>
             <a class="btn btn-gold" href="#quote" onclick="prefill('Executive gift sets')">Request quote</a>
           </div>
         </article>
@@ -433,7 +464,7 @@
           <div class="body">
             <p class="price">Price on request</p>
             <h3>More branded merch</h3>
-            <p>Desk accessories, apparel and other custom items. Share a reference — we will source and brand.</p>
+            <p>Desk accessories, apparel and other custom items. Share a reference and we will source and brand.</p>
             <a class="btn btn-gold" href="#quote" onclick="prefill('Other branded merchandise')">Request quote</a>
           </div>
         </article>
@@ -448,7 +479,7 @@
       <div class="step-grid">
         <div class="step"><div class="num">01</div><h3>Share the brief</h3><p>Occasion, quantity, city and budget. WhatsApp or the form is enough.</p></div>
         <div class="step"><div class="num">02</div><h3>Options &amp; mockup</h3><p>We send options and a branding mockup so you can approve before production.</p></div>
-        <div class="step"><div class="num">03</div><h3>Produce</h3><p>Print, engrave or pack. We flag festive lead times early — especially Diwali in Mumbai.</p></div>
+        <div class="step"><div class="num">03</div><h3>Produce</h3><p>Print, engrave or pack. We flag festive lead times early, especially Diwali in Mumbai.</p></div>
         <div class="step"><div class="num">04</div><h3>Deliver</h3><p>Mumbai / Navi Mumbai handoff or pan-India dispatch to offices and event venues.</p></div>
       </div>
     </div>
@@ -464,7 +495,7 @@
           <div class="who">Priya S. · HR, Mumbai</div>
         </blockquote>
         <blockquote class="rev">
-          <p>“Used Luxeris for a conference kit — umbrellas, tags and a small desk set. Branding was clean and delivery hit the venue window.”</p>
+          <p>“Used Luxeris for a conference kit: umbrellas, tags and a small desk set. Branding was clean and delivery hit the venue window.”</p>
           <div class="who">Rohan M. · Admin, Navi Mumbai</div>
         </blockquote>
         <blockquote class="rev">
@@ -518,7 +549,7 @@
       <div class="foot-grid">
         <div>
           <h2>LUXERIS</h2>
-          <p style="margin-top:12px">Corporate gifting for Mumbai — hampers, executive sets and branded merchandise.</p>
+          <p style="margin-top:12px">Corporate gifting for Mumbai: hampers, executive sets and branded merchandise.</p>
           <p style="margin-top:10px">Kamothe, Navi Mumbai, Maharashtra<br>Serving Mumbai, Navi Mumbai, Thane &amp; pan-India</p>
         </div>
         <div>
@@ -545,7 +576,7 @@
         <source src="images/luggage-tag.mp4" type="video/mp4">
       </video>
       <h3>Lenticular luggage tags</h3>
-      <p style="color:var(--muted)">Brand on one face, contact details on the other. A recent bulk order — same process for your logo.</p>
+      <p style="color:var(--muted)">Brand on one face, contact details on the other. A recent bulk order. Same process for your logo.</p>
       <a class="btn btn-gold" href="#quote" style="width:100%;margin-top:12px" onclick="closeVideo(); prefill('Lenticular luggage tags')">Request a quote</a>
     </div>
   </div>
