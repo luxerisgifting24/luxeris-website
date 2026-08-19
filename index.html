@@ -102,45 +102,46 @@
     .hamburger span { display: block; height: 2px; width: 18px; background: var(--ink); margin: 5px auto; }
 
     .hero {
-      display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px;
+      display: grid; grid-template-columns: 1.05fr .95fr; gap: 36px;
       align-items: center;
-      padding: 48px 0 64px;
+      padding: 28px 0 32px;
     }
     .eyebrow {
       display: inline-block; letter-spacing: .22em; text-transform: uppercase;
-      font-size: .72rem; color: var(--gold-deep); border: 1px solid var(--line);
-      padding: .4rem .8rem; border-radius: 999px; margin-bottom: 18px;
+      font-size: .7rem; color: var(--gold-deep); border: 1px solid var(--line);
+      padding: .35rem .75rem; border-radius: 999px; margin-bottom: 12px;
     }
     h2.display, .display {
       font-family: "Cormorant Garamond", serif;
-      font-weight: 500; font-size: clamp(2.15rem, 4.2vw, 4.6rem);
+      font-weight: 500; font-size: clamp(1.95rem, 3.6vw, 3.6rem);
       line-height: 1.08; letter-spacing: -.02em;
     }
-    .hero p.lead { margin-top: 16px; color: var(--muted); font-size: clamp(1rem, 1.15vw, 1.22rem); max-width: 36rem; }
+    .hero p.lead { margin-top: 12px; color: var(--muted); font-size: clamp(.95rem, 1.05vw, 1.1rem); max-width: 34rem; }
     .hero-actions {
-      display: flex; flex-wrap: wrap; gap: 12px;
-      margin-top: 24px; margin-bottom: 8px;
-      padding-bottom: 8px;
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-top: 18px; margin-bottom: 0;
+      padding-bottom: 0;
     }
     .hero-actions .btn {
-      min-width: 168px;
+      min-width: 150px;
       max-width: 100%;
-      padding: .9rem 1.4rem;
+      padding: .75rem 1.2rem;
       white-space: nowrap;
     }
-    .hero-meta { display: flex; gap: 22px; margin-top: 28px; color: var(--muted); font-size: .92rem; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; color: var(--muted); font-size: .88rem; }
     .hero-img {
-      border-radius: 28px; overflow: hidden;
-      box-shadow: 0 24px 60px rgba(28,22,16,.14);
+      border-radius: 24px; overflow: hidden;
+      box-shadow: 0 18px 48px rgba(28,22,16,.12);
       aspect-ratio: 4/3; object-fit: cover; width: 100%;
+      max-height: min(420px, 48vh);
     }
 
     .strip {
       background: var(--ink); color: #e8d5a8;
-      padding: 16px 20px; text-align: center;
-      letter-spacing: .16em; text-transform: uppercase; font-size: .72rem;
+      padding: 12px 16px; text-align: center;
+      letter-spacing: .14em; text-transform: uppercase; font-size: .7rem;
     }
-    .strip span { margin: 0 14px; display: inline-block; }
+    .strip span { margin: 0 12px; display: inline-block; }
 
     section { padding: 84px 0; }
     .section-kicker { letter-spacing: .22em; text-transform: uppercase; font-size: .72rem; color: var(--gold-deep); margin-bottom: 10px; }
@@ -279,10 +280,12 @@
       .btn { padding: .85rem 1.15rem; }
       .wa { right: 14px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
     }
-    @media (max-height: 820px) and (min-width: 901px) {
-      .hero { padding: 28px 0 40px; gap: 32px; }
-      .hero-img { max-height: 420px; }
-      .hero-meta { margin-top: 16px; }
+    @media (max-height: 900px) and (min-width: 901px) {
+      .hero { padding: 20px 0 24px; gap: 28px; }
+      .hero-img { max-height: min(380px, 42vh); }
+      .hero-meta { margin-top: 12px; }
+      .display { font-size: clamp(1.9rem, 3.2vw, 3.1rem); }
+      .nav-inner { min-height: 64px; }
     }
   </style>
 </head>
@@ -487,8 +490,9 @@
 
   <section>
     <div class="wrap">
-      <p class="section-kicker">What teams say</p>
+      <p class="section-kicker">Client notes</p>
       <h2 class="section-title">Clear quotes. On-time boxes.</h2>
+      <p style="color:var(--muted);margin-top:8px;max-width:40rem">Feedback from recent orders (WhatsApp / email). This site does not host public comments.</p>
       <div class="rev-grid">
         <blockquote class="rev">
           <p>“We needed 400 Diwali sets for two Mumbai offices. Options came the same day and the finish was consistent across the lot.”</p>
@@ -507,6 +511,11 @@
           <div class="who">Vikram D. · Procurement, Pune</div>
         </blockquote>
       </div>
+      <p style="margin-top:28px;text-align:center">
+        <a class="btn btn-line" href="https://share.google/0j7QywFZfwFwP50KZ" target="_blank" rel="noopener">Find us on Google</a>
+        <span style="display:inline-block;width:10px"></span>
+        <a class="btn btn-gold" href="https://share.google/0j7QywFZfwFwP50KZ" target="_blank" rel="noopener">Leave a Google review</a>
+      </p>
     </div>
   </section>
 
@@ -557,12 +566,14 @@
           <p><a href="tel:+919820810040">+91 98208 10040</a></p>
           <p><a href="mailto:luxerisgifting@gmail.com">luxerisgifting@gmail.com</a></p>
           <p><a href="https://wa.me/919820810040" target="_blank" rel="noopener">WhatsApp</a></p>
+          <p><a href="https://share.google/0j7QywFZfwFwP50KZ" target="_blank" rel="noopener">Google</a></p>
         </div>
         <div>
           <strong style="color:#f3e6c6">Site</strong>
           <p><a href="#collection">Collection</a></p>
           <p><a href="#quote">Get a quote</a></p>
           <p><a href="privacy.html">Privacy</a></p>
+          <p><a href="https://share.google/0j7QywFZfwFwP50KZ" target="_blank" rel="noopener">Leave a Google review</a></p>
         </div>
       </div>
       <p class="copy">© 2026 Luxeris. All rights reserved.</p>
