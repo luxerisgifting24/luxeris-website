@@ -541,7 +541,7 @@
   <div class="modal" id="videoModal" role="dialog" aria-label="Luggage tag video">
     <div class="modal-box">
       <button class="modal-close" type="button" onclick="closeVideo()" aria-label="Close">&times;</button>
-      <video id="tagVideo" controls playsinline poster="images/luggage-poster.jpg">
+      <video id="tagVideo" controls controlsList="nodownload noplaybackrate" disablePictureInPicture playsinline poster="images/luggage-poster.jpg" oncontextmenu="return false;">
         <source src="images/luggage-tag.mp4" type="video/mp4">
       </video>
       <h3>Lenticular luggage tags</h3>
