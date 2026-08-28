@@ -214,9 +214,11 @@
     }
     .card .body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
     .card h3 { font-family: "Cormorant Garamond", serif; font-size: 1.4rem; }
-    .card p { color: var(--muted); font-size: .94rem; flex: 1; }
+    .card p { color: var(--muted); font-size: .94rem; }
+    .card .body > p:not(.price):first-of-type { flex: 1; }
     .price { font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-deep); }
-    .card .btn { margin-top: 8px; width: 100%; }
+    .card .btn { width: 100%; }
+    .card .btn:first-of-type { margin-top: auto; }
 
     .step-grid { grid-template-columns: repeat(4, 1fr); }
     .step { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
@@ -509,7 +511,7 @@
             <p class="price">From ₹60 / pc</p>
             <h3>2027 Customised Yearly Calendar</h3>
             <p>Make your brand visible all year long. 12-sheet calendar with complete Panchang details and customised advertising space. Available in Marathi only.</p>
-            <p style="font-size:.88rem;color:var(--muted);margin-top:4px">300 pcs — ₹70/pc · 500 pcs — ₹65/pc · 1,000 pcs — ₹60/pc<br>Order by 30 September 2026</p>
+            <p style="font-size:.88rem;color:var(--muted);margin-top:4px">300 pcs — ₹70/pc · 500 pcs — ₹65/pc · 1,000 pcs — ₹60/pc<br>Order before 30th September 2026</p>
             <a class="btn btn-gold" href="#quote" onclick="prefill('2027 Customised Yearly Calendar')">Request quote</a>
           </div>
         </article>
