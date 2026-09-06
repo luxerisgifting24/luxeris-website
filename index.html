@@ -398,6 +398,95 @@
       .wrap { width: calc(100% - 28px); }
       .nav-inner { width: calc(100% - 20px); }
     }
+
+    /* Mobile-first premium presentation: desktop structure/content remains unchanged. */
+    .mobile-nav-quote, .mobile-hero-copy, .mobile-benefits, .mobile-collection-head,
+    .mobile-card-title, .mobile-card-arrow, .mobile-final-cta { display: none; }
+
+    @media (max-width: 700px) {
+      body { overflow-x: hidden; background: var(--cream); }
+      nav { position: sticky; top: 0; }
+      .nav-inner { position: relative; min-height: 70px; width: calc(100% - 20px); gap: 6px; }
+      .nav-inner .brand { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; white-space: nowrap; }
+      .brand h1 { font-size: 1.55rem; letter-spacing: .28em; }
+      .brand p { font-size: .50rem; letter-spacing: .14em; }
+      .nav-links { display: none; }
+      .hamburger { display: inline-block; order: 1; flex: 0 0 44px; z-index: 2; }
+      .mobile-nav-quote { display: inline-flex; order: 3; margin-left: auto; align-items: center; justify-content: center; min-height: 44px; padding: 0 14px; border-radius: 999px; background: linear-gradient(120deg,#8a6424,#c9a45c); color:#140f0a; font-size:.78rem; text-decoration:none; white-space:nowrap; z-index:2; }
+
+      .hero { width: calc(100% - 20px); min-height: 0; padding: 20px 0 18px; display: grid; grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr); gap: 10px; align-items: center; }
+      .desktop-hero-copy { display: none; }
+      .mobile-hero-copy { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: 4px 0 4px 2px; }
+      .mobile-hero-copy h2 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:500; font-size: clamp(1.8rem, 7.6vw, 2.45rem); line-height:1.02; letter-spacing:-.025em; }
+      .mobile-hero-copy > p { margin-top:12px; color:var(--muted); font-size:.68rem; line-height:1.45; }
+      .mobile-hero-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+      .mobile-hero-actions .btn { min-height:40px; padding:.65rem .72rem; font-size:.68rem; white-space:nowrap; }
+      .hero-img { width:100%; height:100%; max-height:none; min-height:260px; object-fit:cover; border-radius:20px; }
+      .hero-meta { display:none; }
+      .hero-actions { display:none; }
+
+      .strip { display:none; }
+      .mobile-benefits { display:grid; grid-template-columns:repeat(3,1fr); background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:20px 8px; }
+      .mobile-benefits > div { min-width:0; text-align:center; padding:0 5px; border-right:1px solid var(--line); display:flex; flex-direction:column; align-items:center; gap:6px; }
+      .mobile-benefits > div:last-child { border-right:0; }
+      .benefit-icon { width:30px; height:30px; display:grid; place-items:center; color:var(--gold-deep); font-family:Georgia,serif; font-size:1.8rem; line-height:1; }
+      .mobile-benefits strong { font-size:.66rem; line-height:1.2; font-weight:500; color:var(--ink); }
+
+      #collection { padding:48px 0 34px; }
+      #collection > .wrap { width:calc(100% - 28px); }
+      .desktop-collection-head, #collection > .wrap > .desktop-collection-head + p { display:none; }
+      .mobile-collection-head { display:flex; align-items:end; justify-content:space-between; gap:12px; }
+      .mobile-collection-head .section-kicker { margin-bottom:6px; font-size:.58rem; }
+      .mobile-collection-head .section-title { font-size:1.85rem; line-height:1; }
+      .mobile-collection-head > a { flex:0 0 auto; text-decoration:none; color:var(--gold-deep); font-size:.82rem; padding-bottom:3px; }
+
+      #collection .prod-grid { display:flex; overflow-x:auto; overflow-y:hidden; gap:12px; margin:22px -14px 0; padding:0 14px 10px; scroll-snap-type:x mandatory; scroll-padding-left:14px; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+      #collection .prod-grid::-webkit-scrollbar { display:none; }
+      #collection .card { position:relative; flex:0 0 min(72vw, 290px); max-width:none; min-height:0; height:255px; border-radius:20px; scroll-snap-align:start; overflow:hidden; box-shadow:0 10px 30px rgba(28,22,16,.08); }
+      #collection .card img { height:185px; width:100%; padding:0; object-fit:cover; background:#f7f1e6; cursor:pointer; }
+      #collection .card .body { position:relative; padding:12px 14px; min-height:70px; }
+      #collection .card h3, #collection .card p, #collection .card .price, #collection .card .body > .btn { display:none; }
+      #collection .mobile-card-title { display:block; font-family:"Cormorant Garamond",Georgia,serif; font-size:1.22rem; line-height:1.05; padding-right:48px; }
+      #collection .mobile-card-arrow { display:grid; place-items:center; position:absolute; right:12px; bottom:12px; width:40px; height:40px; border:1px solid var(--gold); border-radius:50%; text-decoration:none; color:var(--gold-deep); font-size:1.35rem; background:var(--white); }
+      #collection .mobile-order-diwali { order:1; }
+      #collection .mobile-order-sweets { order:2; }
+      #collection .mobile-order-executive { order:3; }
+      #collection .mobile-order-calendar { order:4; }
+      #collection .mobile-order-trophies { order:5; }
+      #collection .card:not(.mobile-order-diwali):not(.mobile-order-sweets):not(.mobile-order-executive):not(.mobile-order-calendar):not(.mobile-order-trophies) { order:20; }
+      #collection .prod-grid::after { content:''; flex:0 0 2px; }
+      #collection .prod-grid::before { content:''; }
+      #collection .mobile-carousel-note { display:flex; justify-content:center; margin-top:4px; font-size:.68rem; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; }
+      #collection .mobile-carousel-note::after { content:'  Swipe →'; }
+
+      .mobile-final-cta { display:block; padding:0 0 30px; }
+      .mobile-final-cta > div { width:calc(100% - 28px); margin:0 auto; background:#fbf4e9; border:1px solid var(--line); border-radius:24px; padding:20px 18px; display:grid; grid-template-columns:42px 1fr; gap:8px 12px; align-items:center; }
+      .mobile-cta-icon { width:38px; height:38px; border:2px solid var(--gold-deep); border-radius:14px; display:grid; place-items:center; color:var(--gold-deep); letter-spacing:2px; font-size:.7rem; }
+      .mobile-final-cta h2 { font-family:"Cormorant Garamond",Georgia,serif; font-size:1.65rem; line-height:1; font-weight:500; }
+      .mobile-final-cta p { color:var(--muted); font-size:.74rem; line-height:1.35; margin-top:4px; }
+      .mobile-whatsapp-cta { grid-column:1 / -1; margin-top:8px; min-height:48px; border-radius:999px; display:flex; align-items:center; justify-content:center; gap:8px; background:#25d366; color:#fff; text-decoration:none; font-size:.9rem; }
+
+      /* Keep the rest of the existing homepage readable and spacious on phones. */
+      section { padding:48px 0; }
+      .about-card { padding:22px; border-radius:22px; }
+      .about-grid { gap:20px; }
+      .occ-grid, .step-grid, .rev-grid, .faq-grid { grid-template-columns:1fr; }
+      .section-title { font-size:2rem; line-height:1.05; }
+      .foot-grid { grid-template-columns:1fr; gap:20px; }
+    }
+
+    @media (min-width: 701px) {
+      .desktop-hero-copy { display:block; }
+      .desktop-collection-head { display:block; }
+    }
+
+    @media (max-width: 700px) {
+      .mobile-wa-icon { font-size: 1rem; line-height: 1; margin-right: 2px; }
+      .mobile-carousel-dots { display:flex; justify-content:center; align-items:center; gap:7px; margin-top:8px; }
+      .mobile-carousel-dots button { width:8px; height:8px; border:0; border-radius:50%; background:#ddd7cd; padding:0; }
+      .mobile-carousel-dots button.active { width:9px; height:9px; background:var(--gold-deep); }
+    }
+    @media (min-width: 701px) { .mobile-carousel-dots { display:none; } }
   </style>
 </head>
 <body>
@@ -407,6 +496,7 @@
         <h1>LUXERIS</h1>
         <p>Corporate gifting · Mumbai</p>
       </a>
+      <a class="mobile-nav-quote" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20need%20a%20corporate%20gifting%20quote." target="_blank" rel="noopener" aria-label="Get a quote on WhatsApp"><span class="mobile-wa-icon" aria-hidden="true">⌕</span> Get a Quote</a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#collection">Collection</a>
@@ -430,7 +520,13 @@
   </nav>
 
   <header class="wrap hero">
-    <div>
+    <div class="mobile-hero-copy" aria-hidden="true">
+      <p class="mobile-hero-kicker">Thoughtful gifting<br>for a brighter tomorrow</p>
+      <h2>More Than Gifts.<br><span>Lasting Impressions.</span></h2>
+      <p>Customised corporate gifts for businesses that value people. Thoughtfully sourced, clearly quoted and delivered across India.</p>
+      <a class="btn btn-gold" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20need%20a%20corporate%20gifting%20quote." target="_blank" rel="noopener"><span class="mobile-wa-icon" aria-hidden="true">⌕</span> WhatsApp Us <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="desktop-hero-copy">
       <h2 class="display">Gifts that feel considered, not catalogue leftover.</h2>
       <p class="lead">Executive sets, festive hampers and branded merchandise for companies that want gifts to feel considered. Customised, quoted clearly, and dispatched across India.</p>
       <div class="hero-actions">
@@ -445,6 +541,12 @@
     </div>
     <img class="hero-img" src="images/hero-hamper.jpg" alt="Premium wooden executive gift hamper with flask, notebook and preserves">
   </header>
+
+  <div class="mobile-benefits" aria-label="LUXERIS benefits">
+    <div><span class="benefit-icon" aria-hidden="true">♢</span><strong>Premium<br>Quality</strong></div>
+    <div><span class="benefit-icon" aria-hidden="true">▱</span><strong>Pan-India<br>Delivery</strong></div>
+    <div><span class="benefit-icon" aria-hidden="true">♙</span><strong>Bulk &amp; Corporate<br>Solutions</strong></div>
+  </div>
 
   <div class="strip">
     <span>Custom branding</span>
@@ -489,14 +591,23 @@
 
   <section id="collection">
     <div class="wrap">
-      <p class="section-kicker">Collection</p>
-      <h2 class="section-title">Get a quote. No cart, no guesswork.</h2>
+      <div class="mobile-collection-head">
+        <div>
+          <p class="section-kicker">Explore our gifting options</p>
+          <h2 class="section-title">Explore our gifting options</h2>
+        </div>
+        <a href="#collection" aria-label="See all gifting options">See all <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="desktop-collection-head">
+        <p class="section-kicker">Collection</p>
+        <h2 class="section-title">Get a quote. No cart, no guesswork.</h2>
+      </div>
       <p style="color:var(--muted);margin-top:10px;max-width:40rem">Prices depend on quantity, branding and finish. We quote after a short brief. Product photos include representative samples.</p>
       <div class="prod-grid">
-        <article class="card">
+        <article class="card mobile-order-sweets">
           <img src="images/diwali-sweets-gift-box-500g.png" alt="Assorted Diwali sweets gift box 500 g">
           <div class="body">
-                        <h3>Assorted Diwali Sweets Gift Box</h3>
+                        <h3>Assorted Diwali Sweets Gift Box</h3><span class="mobile-card-title">Dry Fruits &amp; Sweets</span><a class="mobile-card-arrow" href="#quote" onclick="prefill('Assorted Diwali Sweets Gift Box')" aria-label="Get a quote for Dry Fruits and Sweets">→</a>
             <p>Traditional Indian sweets, freshly prepared with pure cow ghee and beautifully packed for Diwali gifting.</p>
             <p><strong>Available in:</strong> 500 g &bull; Customisable sweet assortment.</p>
             <p><strong>Finish:</strong> <strong>Matte Lamination box</strong> — matte-laminated finish &bull; <strong>Matte Lamination + UV</strong> — lamination with Spot UV coating.</p>
@@ -505,10 +616,10 @@
             <a class="btn btn-gold" href="#quote" onclick="prefill('Assorted Diwali Sweets Gift Box')">Get Quote</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card mobile-order-diwali">
           <img src="images/premium-diwali-dry-fruit-gift-box.png" alt="Premium Diwali dry fruit gift box with almonds walnuts pistachios and cashews">
           <div class="body">
-                        <h3>Premium Dry Fruit Gift Box</h3>
+                        <h3>Premium Dry Fruit Gift Box</h3><span class="mobile-card-title">Diwali Gifts</span><a class="mobile-card-arrow" href="/diwali-corporate-gifts-mumbai.html" aria-label="View Diwali Gifts">→</a>
             <p>A thoughtfully curated selection of premium dry fruits, beautifully presented in an elegant festive gift box.</p>
             <p><strong>Includes:</strong> Almonds &bull; Walnuts &bull; Pistachios &bull; Cashews.</p>
             <p><strong>Available in:</strong> Multiple pack sizes &bull; Customisable selection and packaging.</p>
@@ -525,18 +636,18 @@
             <a class="btn btn-gold" href="#quote" onclick="prefill('Festive & executive hampers')">Get Quote</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card mobile-order-executive">
           <img src="images/giftset.jpg" alt="Executive corporate gift sets">
           <div class="body">
-                        <h3>Executive gift sets</h3>
+                        <h3>Executive gift sets</h3><span class="mobile-card-title">Executive Gift Sets</span><a class="mobile-card-arrow" href="/corporate-gift-sets.html" aria-label="View Executive Gift Sets">→</a>
             <p>Bottle, planner, pen and accessory sets, colour-matched and logo-ready for bulk.</p>
             <a class="btn btn-gold" href="#quote" onclick="prefill('Executive gift sets')">Get Quote</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card mobile-order-trophies">
           <img src="images/trophies.jpg" alt="Trophies and mementos">
           <div class="body">
-                        <h3>Trophies &amp; mementos</h3>
+                        <h3>Trophies &amp; mementos</h3><span class="mobile-card-title">Trophies &amp; Mementos</span><a class="mobile-card-arrow" href="/corporate-trophies-awards.html" aria-label="View Trophies and Mementos">→</a>
             <p>Crystal, acrylic and wooden awards with custom engraving for events and recognition nights.</p>
             <a class="btn btn-line" href="/corporate-trophies-awards.html">View Trophies &amp; Awards</a>
             <a class="btn btn-gold" href="#quote" onclick="prefill('Trophies & mementos')">Get Quote</a>
@@ -589,11 +700,11 @@
             <a class="btn btn-gold" href="#quote" onclick="prefill('Lenticular luggage tags')">Get Quote</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card mobile-order-calendar">
           <img src="images/calendar.jpg" alt="2027 Customised Yearly Calendar with Panchang and logo branding">
           <div class="body">
             <p class="price">From ₹60 / pc</p>
-            <h3>2027 Customised Yearly Calendar</h3>
+            <h3>2027 Customised Yearly Calendar</h3><span class="mobile-card-title">Customised Calendars</span><a class="mobile-card-arrow" href="/corporate-calendars.html" aria-label="View Customised Calendars">→</a>
             <p>Make your brand visible all year long. 12-sheet calendar with complete Panchang details and customised advertising space. Available in Marathi only.</p>
             <p style="font-size:.86rem;color:var(--gold-deep)">300 pcs — ₹70/pc · 500 pcs — ₹65/pc · 1,000 pcs — ₹60/pc</p>
             <p style="font-size:.86rem;color:var(--gold-deep)">Order before 30th September 2026</p>
@@ -610,6 +721,7 @@
           </div>
         </article>
       </div>
+      <div class="mobile-carousel-dots" aria-label="Gifting options carousel"><button type="button" class="active" aria-label="Show Diwali Gifts"></button><button type="button" aria-label="Show Dry Fruits and Sweets"></button><button type="button" aria-label="Show Executive Gift Sets"></button><button type="button" aria-label="Show Customised Calendars"></button><button type="button" aria-label="Show Trophies and Mementos"></button></div>
     </div>
   </section>
 
@@ -663,6 +775,14 @@
           <div class="who"><a href="/corporate-diwali-gifts-under-500.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Read the guide →</a></div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="mobile-final-cta" aria-label="Custom corporate gifting requirement">
+    <div>
+      <span class="mobile-cta-icon" aria-hidden="true">•••</span>
+      <div><h2>Have a specific requirement?</h2><p>Tell us your requirement and we’ll suggest the right options.</p></div>
+      <a class="mobile-whatsapp-cta" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20have%20a%20specific%20corporate%20gifting%20requirement." target="_blank" rel="noopener">Chat on WhatsApp <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -854,5 +974,33 @@
       window.open('https://wa.me/919820810040?text=' + encodeURIComponent(text), '_blank');
     }
   </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('#collection .prod-grid');
+  const dots = document.querySelectorAll('.mobile-carousel-dots button');
+  if (!carousel || !dots.length) return;
+  const mobileQuery = window.matchMedia('(max-width: 700px)');
+  let timer = null, paused = false;
+  const targets = ['.mobile-order-diwali','.mobile-order-sweets','.mobile-order-executive','.mobile-order-calendar','.mobile-order-trophies'];
+  function goTo(i) {
+    if (!mobileQuery.matches) return;
+    const card = carousel.querySelector(targets[i]);
+    if (!card) return;
+    carousel.scrollTo({left: card.offsetLeft - 14, behavior:'smooth'});
+    dots.forEach((d,n)=>d.classList.toggle('active', n===i));
+  }
+  dots.forEach((d,i)=>d.addEventListener('click',()=>{ paused=true; goTo(i); clearTimeout(timer); setTimeout(()=>paused=false,5000); }));
+  function start() {
+    clearInterval(timer);
+    if (!mobileQuery.matches) return;
+    let i=0;
+    timer=setInterval(()=>{ if (!paused) { i=(i+1)%targets.length; goTo(i); } }, 4200);
+  }
+  carousel.addEventListener('touchstart',()=>{paused=true;},{passive:true});
+  carousel.addEventListener('touchend',()=>{clearTimeout(timer);setTimeout(()=>{paused=false;start();},3500);},{passive:true});
+  start();
+});
+</script>
 </body>
 </html>
