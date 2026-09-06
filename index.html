@@ -495,6 +495,128 @@
     }
     @media (min-width: 701px) { .mobile-carousel-dots { display:none; } }
   </style>
+
+<style>
+/* FINAL MOBILE GIFTING CAROUSEL — desktop remains unchanged */
+@media (max-width:700px) {
+
+  /* Replace the three benefit boxes with the gifting-options section */
+  .mobile-benefits {
+    display:none !important;
+  }
+
+  /* Bring gifting options immediately after the hero */
+  #collection {
+    margin-top:0 !important;
+    padding-top:34px !important;
+  }
+
+  /* Reference-style heading */
+  .mobile-collection-head {
+    padding:0 22px !important;
+  }
+  .mobile-collection-head .section-kicker {
+    font-size:clamp(.72rem,2.6vw,1rem) !important;
+    letter-spacing:.20em !important;
+    font-weight:500 !important;
+  }
+
+  /* Horizontal swipe carousel */
+  #collection .prod-grid {
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    scroll-snap-type:x mandatory !important;
+    gap:12px !important;
+    padding:0 14px 8px !important;
+    margin-top:24px !important;
+    scrollbar-width:none !important;
+  }
+  #collection .prod-grid::-webkit-scrollbar {
+    display:none !important;
+  }
+
+  #collection .card {
+    flex:0 0 clamp(150px,42vw,205px) !important;
+    width:clamp(150px,42vw,205px) !important;
+    height:clamp(250px,64vw,330px) !important;
+    scroll-snap-align:start !important;
+    border-radius:20px !important;
+  }
+
+  #collection .card img {
+    height:clamp(170px,47vw,245px) !important;
+    object-fit:cover !important;
+    padding:0 !important;
+  }
+
+  #collection .card .body {
+    padding:12px 12px !important;
+  }
+
+  #collection .mobile-card-title {
+    font-family:"Outfit",system-ui,sans-serif !important;
+    font-size:clamp(.86rem,2.7vw,1rem) !important;
+    line-height:1.08 !important;
+    font-weight:500 !important;
+    color:#10263a !important;
+    padding-right:44px !important;
+  }
+
+  #collection .mobile-card-arrow {
+    width:40px !important;
+    height:40px !important;
+    right:9px !important;
+    bottom:8px !important;
+    border:1px solid #b8893a !important;
+    color:#17324b !important;
+    background:#fff !important;
+  }
+
+  /* Exact mobile order */
+  #collection .mobile-order-diwali { order:1 !important; }
+  #collection .mobile-order-sweets { order:2 !important; }
+  #collection .mobile-order-executive { order:3 !important; }
+  #collection .mobile-order-calendar { order:4 !important; }
+  #collection .mobile-order-trophies { order:5 !important; }
+
+  /* Do not show the other catalogue cards in the mobile carousel */
+  #collection .prod-grid > .card:not(.mobile-order-diwali):not(.mobile-order-sweets):not(.mobile-order-executive):not(.mobile-order-calendar):not(.mobile-order-trophies) {
+    display:none !important;
+  }
+
+  /* Dots */
+  #collection .mobile-carousel-dots {
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:9px !important;
+    margin:14px 0 0 !important;
+  }
+
+  /* Keep the premium CTA directly below the carousel */
+  .mobile-final-cta {
+    display:block !important;
+    padding-top:28px !important;
+  }
+}
+
+/* Small phones */
+@media (max-width:390px) {
+  .mobile-collection-head {
+    padding:0 18px !important;
+  }
+  #collection .card {
+    flex-basis:152px !important;
+    width:152px !important;
+    height:250px !important;
+  }
+  #collection .card img {
+    height:175px !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <nav>
@@ -615,7 +737,7 @@
         <article class="card mobile-order-sweets">
           <img src="images/diwali-sweets-gift-box-500g.png" alt="Assorted Diwali sweets gift box 500 g">
           <div class="body">
-                        <h3>Assorted Diwali Sweets Gift Box</h3><span class="mobile-card-title">Dry Fruits &amp; Sweets</span><a class="mobile-card-arrow" href="#quote" onclick="prefill('Assorted Diwali Sweets Gift Box')" aria-label="Get a quote for Dry Fruits and Sweets">→</a>
+                        <h3>Assorted Diwali Sweets Gift Box</h3><span class="mobile-card-title">Dry Fruits &amp; Sweets</span><a class="mobile-card-arrow" href="/diwali-corporate-gifts-mumbai.html" aria-label="View Dry Fruits and Sweets">→</a>
             <p>Traditional Indian sweets, freshly prepared with pure cow ghee and beautifully packed for Diwali gifting.</p>
             <p><strong>Available in:</strong> 500 g &bull; Customisable sweet assortment.</p>
             <p><strong>Finish:</strong> <strong>Matte Lamination box</strong> — matte-laminated finish &bull; <strong>Matte Lamination + UV</strong> — lamination with Spot UV coating.</p>
