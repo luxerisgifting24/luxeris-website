@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luxeris | Corporate Gifting in Mumbai</title>
-  <meta name="description" content="Premium corporate gifting in Mumbai: executive gift sets, festive hampers, branded merchandise, trophies and custom gifts. Based at 3rd Bhoiwada Road, Bhuleshwar, Mumbai 400002. Pan-India delivery.">
+  <meta name="description" content="Premium corporate gifting in Mumbai: executive gift sets, festive hampers, branded merchandise, trophies and custom gifts. Based in Bhuleshwar, Mumbai. Pan-India delivery.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://luxerisgifting.in/">
   <meta property="og:title" content="Luxeris | Corporate Gifting in Mumbai">
   <meta property="og:description" content="Customised premium gifting for employees, clients, Diwali, onboarding and conferences. Based in Mumbai. Delivered across India.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://luxerisgifting.in/">
+  <meta property="og:site_name" content="LUXERIS">
+  <meta name="twitter:title" content="Luxeris | Corporate Gifting in Mumbai">
+  <meta name="twitter:description" content="Customised corporate gifts, executive sets, festive hampers, trophies and branded merchandise from Mumbai, with pan-India delivery.">
   <meta property="og:image" content="https://luxerisgifting.in/images/hero-hamper.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -21,21 +24,55 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Luxeris",
-    "description": "Corporate gifting solutions in Mumbai: premium hampers, executive sets and branded merchandise.",
-    "url": "https://luxerisgifting.in/",
-    "telephone": "+919820810040",
-    "email": "luxerisgifting@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "3rd Bhoiwada Road, Bhuleshwar",
-      "addressLocality": "Mumbai",
-      "postalCode": "400002",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
-    },
-    "areaServed": ["Mumbai", "Navi Mumbai", "Thane", "India"]
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://luxerisgifting.in/#organization",
+        "name": "LUXERIS",
+        "url": "https://luxerisgifting.in/",
+        "description": "Mumbai-based corporate gifting company supplying customised corporate gifts, executive gift sets, festive hampers, trophies, calendars and branded merchandise for businesses.",
+        "telephone": "+919820810040",
+        "email": "luxerisgifting@gmail.com"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://luxerisgifting.in/#website",
+        "url": "https://luxerisgifting.in/",
+        "name": "LUXERIS | Corporate Gifting in Mumbai",
+        "publisher": { "@id": "https://luxerisgifting.in/#organization" }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://luxerisgifting.in/#localbusiness",
+        "name": "LUXERIS",
+        "url": "https://luxerisgifting.in/",
+        "description": "Corporate gifting solutions in Mumbai, Navi Mumbai and Thane, with pan-India delivery. Customised gift sets, festive hampers, trophies, calendars and branded merchandise for businesses.",
+        "telephone": "+919820810040",
+        "email": "luxerisgifting@gmail.com",
+        "image": "https://luxerisgifting.in/images/hero-hamper.jpg",
+        "parentOrganization": { "@id": "https://luxerisgifting.in/#organization" },
+        "areaServed": ["Mumbai", "Navi Mumbai", "Thane", "India"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "3rd Bhoiwada Road",
+          "addressLocality": "Bhuleshwar, Mumbai",
+          "postalCode": "400002",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        },
+        "knowsAbout": [
+          "Corporate gifting",
+          "Employee gifting",
+          "Client and business partner gifting",
+          "Diwali corporate gifts",
+          "Executive corporate gift sets",
+          "Corporate trophies and awards",
+          "Corporate calendars",
+          "Branded merchandise",
+          "Custom corporate gift packaging"
+        ]
+      }
+    ]
   }
   </script>
   <style>
@@ -171,10 +208,10 @@
     }
     .occ h3 { font-family: "Cormorant Garamond", serif; font-size: 1.45rem; margin-bottom: 6px; }
 
-    .prod-grid { grid-template-columns: repeat(3, 1fr); }
+    .prod-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
     .card {
       background: var(--white); border: 1px solid var(--line); border-radius: 24px;
-      overflow: hidden; display: flex; flex-direction: column;
+      overflow: hidden; display: flex; flex-direction: column; height: 100%;
     }
     .card img {
       height: 260px; width: 100%;
@@ -214,11 +251,10 @@
     }
     .card .body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
     .card h3 { font-family: "Cormorant Garamond", serif; font-size: 1.4rem; }
-    .card p { color: var(--muted); font-size: .94rem; }
-    .card .body > p:not(.price):first-of-type { flex: 1; }
+    .card p { color: var(--muted); font-size: .94rem; flex: 0 0 auto; }
     .price { font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-deep); }
-    .card .btn { width: 100%; }
-    .card .btn:first-of-type { margin-top: auto; }
+    .card .btn { margin-top: auto; width: 100%; }
+    .card .btn + .btn { margin-top: 0; }
 
     .step-grid { grid-template-columns: repeat(4, 1fr); }
     .step { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
@@ -331,75 +367,256 @@
       .nav-inner { min-height: 68px; }
     }
 
-    /* ===== Mobile-only landing (hidden on desktop) ===== */
-    .nav-mobile-cta { display: none; }
-    .mobile-hero, .mobile-quickfacts, .mobile-carousel, .mobile-req-card { display: none; }
 
-    .mh-eyebrow { font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 14px; }
-    .mh-title { font-family: "Cormorant Garamond", serif; font-weight: 500; font-size: clamp(1.9rem, 9vw, 2.5rem); line-height: 1.1; color: var(--ink); }
-    .mh-title span { color: var(--gold); }
-    .mh-lead { margin-top: 14px; color: var(--muted); font-size: .96rem; max-width: 32rem; }
-    .mh-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 22px; }
-    .mh-actions .btn { width: 100%; }
-    .mh-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; }
-    .mh-arrow { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: rgba(255,255,255,.28); font-size: .85rem; }
-    .btn-line .mh-arrow { background: rgba(138,100,36,.12); }
-    .mobile-hero { padding-top: 24px; padding-bottom: 0; }
-    .mh-img { width: 100%; height: min(46vw, 260px); object-fit: cover; display: block; margin-top: 24px; }
-
-    .mobile-quickfacts { padding: 22px 0; }
-    .qf-row { display: flex; align-items: flex-start; justify-content: space-between; }
-    .qf { flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 6px; position: relative; }
-    .qf:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 4px; bottom: 4px; width: 1px; background: var(--line); }
-    .qf svg { width: 28px; height: 28px; color: var(--gold-deep); }
-    .qf span { font-size: .8rem; color: var(--ink); line-height: 1.3; }
-
-    .mobile-carousel { padding: 6px 0 28px; }
-    .mc-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; gap: 12px; }
-    .mc-kicker { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); font-weight: 500; }
-    .mc-seeall { font-size: .85rem; color: var(--gold-deep); text-decoration: none; font-weight: 500; white-space: nowrap; }
-    .mc-scroll {
-      display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
-      padding: 0 clamp(14px, 4vw, 24px) 6px; margin: 0 calc(-1 * clamp(14px, 4vw, 24px));
-      -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    /* Responsive fit: preserve the existing design while using available desktop width more naturally. */
+    .wrap, .nav-inner {
+      width: min(100% - clamp(28px, 4vw, 80px), 1840px);
     }
-    .mc-scroll::-webkit-scrollbar { display: none; }
-    .mc-card {
-      scroll-snap-align: start; flex: 0 0 46%; min-width: 155px;
-      text-decoration: none; color: inherit; background: var(--white);
-      border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+    .hero {
+      min-height: clamp(520px, calc(100dvh - 80px - 48px), 760px);
     }
-    .mc-card img { width: 100%; height: 150px; object-fit: cover; }
-    .mc-label { display: flex; align-items: center; justify-content: space-between; padding: 12px 12px 14px; gap: 8px; }
-    .mc-label span:first-child { font-family: "Cormorant Garamond", serif; font-size: 1.02rem; line-height: 1.2; }
-    .mc-arrow { flex-shrink: 0; width: 30px; height: 30px; border: 1px solid var(--line); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: .9rem; color: var(--gold-deep); }
-    .mc-dots { display: flex; justify-content: center; gap: 6px; margin-top: 14px; }
-    .mc-dots .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--line); transition: width .2s, background .2s; }
-    .mc-dots .dot.active { background: var(--gold-deep); width: 16px; border-radius: 4px; }
-
-    .mobile-req-card { padding: 2px 0 32px; }
-    .req-card { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 18px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
-    .req-icon { width: 34px; height: 34px; border-radius: 50%; background: var(--white); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--gold-deep); flex-shrink: 0; }
-    .req-text { flex: 1; min-width: 150px; display: flex; flex-direction: column; gap: 4px; }
-    .req-text strong { font-family: "Cormorant Garamond", serif; font-size: 1.12rem; color: var(--ink); font-weight: 500; }
-    .req-text span { font-size: .82rem; color: var(--muted); }
-    .req-btn { display: inline-flex; align-items: center; gap: 8px; background: #25d366; color: #fff; text-decoration: none; padding: .7rem 1.1rem; border-radius: 999px; font-size: .86rem; font-weight: 500; white-space: nowrap; }
-    .req-btn svg { width: 15px; height: 15px; fill: #fff; }
-
+    .hero > * { min-width: 0; }
+    .hero-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: min(480px, 55vh);
+    }
+    @media (min-width: 1600px) {
+      .wrap, .nav-inner { width: min(100% - 80px, 1840px); }
+      .hero { grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); gap: clamp(40px, 4vw, 72px); }
+    }
+    @media (max-width: 1100px) {
+      .wrap, .nav-inner { width: calc(100% - 40px); }
+    }
     @media (max-width: 900px) {
-      header.hero { display: none; }
-      .strip { display: none; }
-      .mobile-hero, .mobile-quickfacts, .mobile-carousel, .mobile-req-card { display: block; }
-      .nav-inner { flex-wrap: nowrap; }
-      .hamburger { order: -1; }
-      .brand { order: 0; margin-left: 6px; margin-right: auto; }
-      .nav-mobile-cta { order: 2; display: inline-flex; padding: .55rem 1rem; font-size: .82rem; }
+      .wrap, .nav-inner { width: calc(100% - 32px); }
+      .hero { min-height: 0; }
+      .hero-img { max-height: none; }
     }
     @media (max-width: 480px) {
-      .mc-card { flex-basis: 62%; }
+      .wrap { width: calc(100% - 28px); }
+      .nav-inner { width: calc(100% - 20px); }
     }
 
+    /* Mobile-first premium presentation: desktop structure/content remains unchanged. */
+    .mobile-nav-quote, .mobile-hero-copy, .mobile-benefits, .mobile-collection-head,
+    .mobile-card-title, .mobile-card-arrow, .mobile-final-cta { display: none; }
+
+    @media (max-width: 700px) {
+      body { overflow-x: hidden; background: var(--cream); }
+      nav { position: sticky; top: 0; }
+      .nav-inner { position: relative; min-height: 70px; width: calc(100% - 20px); gap: 6px; }
+      .nav-inner .brand { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; white-space: nowrap; max-width: 42vw; }
+      .brand h1 { font-size: clamp(1.15rem, 5.2vw, 1.55rem); letter-spacing: .22em; }
+      .brand p { font-size: .42rem; letter-spacing: .11em; overflow:hidden; text-overflow:clip; }
+      .nav-links { display: none; }
+      .hamburger { display: inline-block; order: 1; flex: 0 0 44px; z-index: 2; }
+      .mobile-nav-quote { display: inline-flex; order: 3; margin-left: auto; align-items: center; justify-content: center; min-height: 42px; width: clamp(108px, 28vw, 145px); padding: 0 10px; border-radius: 999px; background: linear-gradient(120deg,#8a6424,#c9a45c); color:#140f0a; font-size:.70rem; text-decoration:none; white-space:nowrap; z-index:2; }
+
+      .hero { width: calc(100% - 20px); min-height: 0; padding: 20px 0 18px; display: grid; grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr); gap: 10px; align-items: center; }
+      .desktop-hero-copy { display: none; }
+      .mobile-hero-copy { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: 4px 0 4px 2px; }
+      .mobile-hero-copy h2 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:500; font-size: clamp(1.75rem, 7.2vw, 2.45rem); line-height:1.02; letter-spacing:-.025em; }
+      .mobile-hero-copy > p { margin-top:12px; color:var(--muted); font-size:.68rem; line-height:1.45; }
+      .mobile-hero-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+      .mobile-hero-actions .btn { min-height:40px; padding:.65rem .72rem; font-size:.68rem; white-space:nowrap; }
+      .hero-img { width:100%; height:100%; max-height:none; min-height:250px; object-fit:cover; object-position:center; border-radius:20px; }
+      .hero-meta { display:none; }
+      .hero-actions { display:none; }
+
+      .strip { display:none; }
+      body { display:flex; flex-direction:column; }
+      body > * { order:10; }
+      body > nav { order:1; }
+      body > .hero { order:2; }
+      body > .mobile-benefits { order:3; }
+      body > #collection { order:4; }
+      body > .mobile-final-cta { order:5; }
+      .mobile-benefits { display:grid; grid-template-columns:repeat(3,1fr); background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:20px 8px; }
+      .mobile-benefits > div { min-width:0; text-align:center; padding:0 5px; border-right:1px solid var(--line); display:flex; flex-direction:column; align-items:center; gap:6px; }
+      .mobile-benefits > div:last-child { border-right:0; }
+      .benefit-icon { width:30px; height:30px; display:grid; place-items:center; color:var(--gold-deep); font-family:Georgia,serif; font-size:1.8rem; line-height:1; }
+      .mobile-benefits strong { font-size:.66rem; line-height:1.2; font-weight:500; color:var(--ink); }
+
+      #collection { padding:38px 0 28px; }
+      #collection > .wrap { width:calc(100% - 28px); }
+      .desktop-collection-head, #collection > .wrap > .desktop-collection-head + p { display:none; }
+      .mobile-collection-head { display:flex; align-items:end; justify-content:space-between; gap:12px; }
+      .mobile-collection-head .section-kicker { margin-bottom:6px; font-size:.58rem; }
+      .mobile-collection-head .section-title { font-size:1.65rem; line-height:1; }
+      .mobile-collection-head > a { flex:0 0 auto; text-decoration:none; color:var(--gold-deep); font-size:.82rem; padding-bottom:3px; }
+
+      #collection .prod-grid { display:flex; overflow-x:auto; overflow-y:hidden; gap:10px; margin:20px -14px 0; padding:0 14px 8px; scroll-snap-type:x mandatory; scroll-padding-left:14px; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+      #collection .prod-grid::-webkit-scrollbar { display:none; }
+      #collection .card { position:relative; flex:0 0 clamp(122px, 22vw, 170px); max-width:none; min-height:0; height:205px; border-radius:18px; scroll-snap-align:start; overflow:hidden; box-shadow:0 10px 30px rgba(28,22,16,.08); }
+      #collection .card img { height:145px; width:100%; padding:0; object-fit:cover; background:#f7f1e6; cursor:pointer; }
+      #collection .card .body { position:relative; padding:10px 10px; min-height:60px; }
+      #collection .card h3, #collection .card p, #collection .card .price, #collection .card .body > .btn { display:none; }
+      #collection .mobile-card-title { display:block; font-family:"Cormorant Garamond",Georgia,serif; font-size:1.02rem; line-height:1.02; padding-right:34px; }
+      #collection .mobile-card-arrow { display:grid; place-items:center; position:absolute; right:8px; bottom:8px; width:30px; height:30px; border:1px solid var(--gold); border-radius:50%; text-decoration:none; color:var(--gold-deep); font-size:1.05rem; background:var(--white); }
+      #collection .mobile-order-diwali { order:1; }
+      #collection .mobile-order-sweets { order:2; }
+      #collection .mobile-order-executive { order:3; }
+      #collection .mobile-order-calendar { order:4; }
+      #collection .mobile-order-trophies { order:5; }
+      #collection .card:not(.mobile-order-diwali):not(.mobile-order-sweets):not(.mobile-order-executive):not(.mobile-order-calendar):not(.mobile-order-trophies) { order:20; }
+      #collection .prod-grid::after { content:''; flex:0 0 2px; }
+      #collection .prod-grid::before { content:''; }
+      #collection .mobile-carousel-note { display:flex; justify-content:center; margin-top:4px; font-size:.68rem; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; }
+      #collection .mobile-carousel-note::after { content:'  Swipe →'; }
+
+      .mobile-final-cta { display:block; padding:0 0 30px; }
+      .mobile-final-cta > div { width:calc(100% - 28px); margin:0 auto; background:#fbf4e9; border:1px solid var(--line); border-radius:24px; padding:20px 18px; display:grid; grid-template-columns:42px 1fr; gap:8px 12px; align-items:center; }
+      .mobile-cta-icon { width:38px; height:38px; border:2px solid var(--gold-deep); border-radius:14px; display:grid; place-items:center; color:var(--gold-deep); letter-spacing:2px; font-size:.7rem; }
+      .mobile-final-cta h2 { font-family:"Cormorant Garamond",Georgia,serif; font-size:1.65rem; line-height:1; font-weight:500; }
+      .mobile-final-cta p { color:var(--muted); font-size:.74rem; line-height:1.35; margin-top:4px; }
+      .mobile-whatsapp-cta { grid-column:1 / -1; margin-top:8px; min-height:48px; border-radius:999px; display:flex; align-items:center; justify-content:center; gap:8px; background:#25d366; color:#fff; text-decoration:none; font-size:.9rem; }
+
+      /* Keep the rest of the existing homepage readable and spacious on phones. */
+      section { padding:48px 0; }
+      .about-card { padding:22px; border-radius:22px; }
+      .about-grid { gap:20px; }
+      .occ-grid, .step-grid, .rev-grid, .faq-grid { grid-template-columns:1fr; }
+      .section-title { font-size:2rem; line-height:1.05; }
+      .foot-grid { grid-template-columns:1fr; gap:20px; }
+    }
+
+    @media (min-width: 701px) {
+      .desktop-hero-copy { display:block; }
+      .desktop-collection-head { display:block; }
+    }
+
+    @media (max-width: 700px) {
+      .mobile-wa-icon { font-size: 1rem; line-height: 1; margin-right: 2px; }
+      .mobile-carousel-dots { display:flex; justify-content:center; align-items:center; gap:7px; margin-top:8px; }
+      .mobile-carousel-dots button { width:8px; height:8px; border:0; border-radius:50%; background:#ddd7cd; padding:0; }
+      .mobile-carousel-dots button.active { width:9px; height:9px; background:var(--gold-deep); }
+    }
+    @media (min-width: 701px) { .mobile-carousel-dots { display:none; } }
   </style>
+
+<style>
+/* FINAL MOBILE GIFTING CAROUSEL — desktop remains unchanged */
+@media (max-width:700px) {
+
+  /* Replace the three benefit boxes with the gifting-options section */
+  .mobile-benefits {
+    display:none !important;
+  }
+
+  /* Bring gifting options immediately after the hero */
+  #collection {
+    margin-top:0 !important;
+    padding-top:34px !important;
+  }
+
+  /* Reference-style heading */
+  .mobile-collection-head {
+    padding:0 22px !important;
+  }
+  .mobile-collection-head .section-kicker {
+    font-size:clamp(.72rem,2.6vw,1rem) !important;
+    letter-spacing:.20em !important;
+    font-weight:500 !important;
+  }
+
+  /* Horizontal swipe carousel */
+  #collection .prod-grid {
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    scroll-snap-type:x mandatory !important;
+    gap:12px !important;
+    padding:0 14px 8px !important;
+    margin-top:24px !important;
+    scrollbar-width:none !important;
+  }
+  #collection .prod-grid::-webkit-scrollbar {
+    display:none !important;
+  }
+
+  #collection .card {
+    flex:0 0 clamp(150px,42vw,205px) !important;
+    width:clamp(150px,42vw,205px) !important;
+    height:clamp(250px,64vw,330px) !important;
+    scroll-snap-align:start !important;
+    border-radius:20px !important;
+  }
+
+  #collection .card img {
+    height:clamp(170px,47vw,245px) !important;
+    object-fit:cover !important;
+    padding:0 !important;
+  }
+
+  #collection .card .body {
+    padding:12px 12px !important;
+  }
+
+  #collection .mobile-card-title {
+    font-family:"Outfit",system-ui,sans-serif !important;
+    font-size:clamp(.86rem,2.7vw,1rem) !important;
+    line-height:1.08 !important;
+    font-weight:500 !important;
+    color:#10263a !important;
+    padding-right:44px !important;
+  }
+
+  #collection .mobile-card-arrow {
+    width:40px !important;
+    height:40px !important;
+    right:9px !important;
+    bottom:8px !important;
+    border:1px solid #b8893a !important;
+    color:#17324b !important;
+    background:#fff !important;
+  }
+
+  /* Exact mobile order */
+  #collection .mobile-order-diwali { order:1 !important; }
+  #collection .mobile-order-sweets { order:2 !important; }
+  #collection .mobile-order-executive { order:3 !important; }
+  #collection .mobile-order-calendar { order:4 !important; }
+  #collection .mobile-order-trophies { order:5 !important; }
+
+  /* Do not show the other catalogue cards in the mobile carousel */
+  #collection .prod-grid > .card:not(.mobile-order-diwali):not(.mobile-order-sweets):not(.mobile-order-executive):not(.mobile-order-calendar):not(.mobile-order-trophies) {
+    display:none !important;
+  }
+
+  /* Dots */
+  #collection .mobile-carousel-dots {
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:9px !important;
+    margin:14px 0 0 !important;
+  }
+
+  /* Keep the premium CTA directly below the carousel */
+  .mobile-final-cta {
+    display:block !important;
+    padding-top:28px !important;
+  }
+}
+
+/* Small phones */
+@media (max-width:390px) {
+  .mobile-collection-head {
+    padding:0 18px !important;
+  }
+  #collection .card {
+    flex-basis:152px !important;
+    width:152px !important;
+    height:250px !important;
+  }
+  #collection .card img {
+    height:175px !important;
+  }
+}
+</style>
+
 </head>
 <body>
   <nav>
@@ -408,6 +625,7 @@
         <h1>LUXERIS</h1>
         <p>Corporate gifting · Mumbai</p>
       </a>
+      <a class="mobile-nav-quote" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20need%20a%20corporate%20gifting%20quote." target="_blank" rel="noopener" aria-label="Get a quote on WhatsApp"><span class="mobile-wa-icon" aria-hidden="true">⌕</span> Get a Quote</a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#collection">Collection</a>
@@ -419,7 +637,6 @@
       <button class="hamburger" id="menuBtn" aria-label="Open menu" type="button">
         <span></span><span></span><span></span>
       </button>
-      <a class="btn btn-gold nav-mobile-cta" href="#quote">Get a quote</a>
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#about">About</a>
@@ -431,84 +648,15 @@
     </div>
   </nav>
 
-  <section class="mobile-hero">
-    <div class="wrap">
-      <p class="mh-eyebrow">Thoughtful gifting<br>for a brighter tomorrow</p>
-      <h2 class="mh-title">Gifts that feel considered, not catalogue leftover.</h2>
-      <p class="mh-lead">Executive sets, festive hampers and branded merchandise for companies that want gifts to feel considered. Customised, quoted clearly, and dispatched across India.</p>
-      <div class="mh-actions">
-        <a class="btn btn-gold" href="#collection">Browse collection</a>
-        <a class="btn btn-line mh-cta" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20need%20a%20corporate%20gifting%20quote%20for%20Mumbai." target="_blank" rel="noopener">WhatsApp us <span class="mh-arrow">&rarr;</span></a>
-      </div>
-    </div>
-    <img class="mh-img" src="images/hero-set.jpg" alt="Premium corporate gift box with flask, notebook and preserves">
-  </section>
-
-  <section class="mobile-quickfacts">
-    <div class="wrap qf-row">
-      <div class="qf">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 3 9l9 13 9-13-9-7Z"/><path d="M3 9h18M8 9l4 13 4-13M8 9l4-7 4 7"/></svg>
-        <span>Premium<br>Quality</span>
-      </div>
-      <div class="qf">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 7h13v9H1z"/><path d="M14 10h4l4 4v2h-8z"/><circle cx="6" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg>
-        <span>Pan-India<br>Delivery</span>
-      </div>
-      <div class="qf">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.3c2.4.4 4.5 2.5 4.5 5.7"/></svg>
-        <span>Bulk &amp; Corporate<br>Solutions</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="mobile-carousel">
-    <div class="wrap mc-head">
-      <p class="mc-kicker">Explore our gifting options</p>
-      <a class="mc-seeall" href="#collection">See all &rarr;</a>
-    </div>
-    <div class="mc-scroll" id="mcScroll">
-      <a class="mc-card" href="#collection" onclick="prefill('Festive & executive hampers')">
-        <img src="images/mugs.jpg" alt="Diwali gift hampers">
-        <div class="mc-label"><span>Diwali Gifts</span><span class="mc-arrow">&rarr;</span></div>
-      </a>
-      <a class="mc-card" href="#collection" onclick="prefill('Festive & executive hampers')">
-        <img src="images/hero-set.jpg" alt="Dry fruits and sweets boxes">
-        <div class="mc-label"><span>Dry Fruits &amp; Sweets</span><span class="mc-arrow">&rarr;</span></div>
-      </a>
-      <a class="mc-card" href="#collection" onclick="prefill('Executive gift sets')">
-        <img src="images/giftset.jpg" alt="Executive corporate gift sets">
-        <div class="mc-label"><span>Executive Gift Sets</span><span class="mc-arrow">&rarr;</span></div>
-      </a>
-      <a class="mc-card" href="#collection" onclick="prefill('Trophies & mementos')">
-        <img src="images/trophies.jpg" alt="Trophies and mementos">
-        <div class="mc-label"><span>Trophies &amp; Mementos</span><span class="mc-arrow">&rarr;</span></div>
-      </a>
-    </div>
-    <div class="mc-dots" id="mcDots">
-      <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
-    </div>
-  </section>
-
-  <section class="mobile-req-card">
-    <div class="wrap">
-      <div class="req-card">
-        <div class="req-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.2 0-2.35-.28-3.36-.78L3 20l1-5.9A8.5 8.5 0 1 1 21 11.5Z"/></svg>
-        </div>
-        <div class="req-text">
-          <strong>Have a specific requirement?</strong>
-          <span>Get in touch with our team for customised solutions.</span>
-        </div>
-        <a class="req-btn" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20have%20a%20specific%20gifting%20requirement." target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.82 11.82 0 0012.07 0C5.53 0 .21 5.32.21 11.86c0 2.09.55 4.14 1.59 5.95L0 24l6.36-1.67a11.8 11.8 0 005.71 1.46h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.14-3.42-8.45zm-8.45 18.3h-.01a9.8 9.8 0 01-5-1.37l-.36-.21-3.78.99 1.01-3.68-.23-.38a9.82 9.82 0 01-1.5-5.27c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.79 9.79 0 012.88 6.95c0 5.43-4.41 9.84-9.81 9.84zm5.39-7.37c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.08-.8.37-.27.3-1.05 1.02-1.05 2.48s1.08 2.88 1.23 3.08c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
-          Chat on WhatsApp
-        </a>
-      </div>
-    </div>
-  </section>
-
   <header class="wrap hero">
-    <div>
+    <div class="mobile-hero-copy">
+      <h2>Gifts that feel considered, not catalogue leftover.</h2>
+      <p>Executive sets, festive hampers and branded merchandise for companies that want gifts to feel considered. Customised, quoted clearly, and dispatched across India.</p>
+      <div class="mobile-hero-actions">
+        <a class="btn btn-gold" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20need%20a%20corporate%20gifting%20quote%20for%20Mumbai." target="_blank" rel="noopener" aria-label="WhatsApp LUXERIS for a quote"><span class="mobile-wa-symbol" aria-hidden="true">◉</span> WhatsApp us <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="desktop-hero-copy">
       <h2 class="display">Gifts that feel considered, not catalogue leftover.</h2>
       <p class="lead">Executive sets, festive hampers and branded merchandise for companies that want gifts to feel considered. Customised, quoted clearly, and dispatched across India.</p>
       <div class="hero-actions">
@@ -524,6 +672,12 @@
     <img class="hero-img" src="images/hero-hamper.jpg" alt="Premium wooden executive gift hamper with flask, notebook and preserves">
   </header>
 
+  <div class="mobile-benefits" aria-label="LUXERIS benefits">
+    <div><span class="benefit-icon" aria-hidden="true">♢</span><strong>Premium<br>Quality</strong></div>
+    <div><span class="benefit-icon" aria-hidden="true">▱</span><strong>Pan-India<br>Delivery</strong></div>
+    <div><span class="benefit-icon" aria-hidden="true">♙</span><strong>Bulk &amp; Corporate<br>Solutions</strong></div>
+  </div>
+
   <div class="strip">
     <span>Custom branding</span>
     <span>Bulk orders</span>
@@ -537,9 +691,8 @@
       <h2 class="section-title">Built on trust and experience.</h2>
       <div class="about-grid">
         <div class="about-card">
-          <p>With over 22 years in the gifting industry at 3rd Bhoiwada Road, Bhuleshwar, Mumbai, we have built strong expertise in premium gifting, customised products, and trusted client relationships.</p>
-          <p>We specialise in corporate gifting, event gifting, wedding hampers, return gifts, branded merchandise, executive gift sets, mugs, apparel, trophies, desk accessories, and personalised solutions. Quality, presentation, and timely delivery stay at the centre of every order.</p>
-          <p>After years of serving clients offline, we started Luxeris online so premium and customised gifting is easier to reach across Mumbai and beyond. Every gift represents appreciation, relationships, and brand value. We work to leave a lasting impression.</p>
+          <p>LUXERIS is a Mumbai-based corporate gifting company supplying customised corporate gifts, executive gift sets, festive hampers, trophies and mementos, calendars, mugs, metal keychains, umbrellas, T-shirts and polos, and branded merchandise for businesses.</p>
+          <p>We serve companies, HR and procurement teams, event organisers and businesses across Mumbai, Navi Mumbai and Thane, with pan-India delivery. Our gifting approach combines practical product selection with company-logo branding, engraving, embroidery, customised packaging and curated gift sets for employee, client, dealer, conference and festive requirements. From employee joining kits and recognition awards to Diwali gifting and branded event merchandise, we support bulk corporate orders from selection through branding and dispatch. With 22+ years in the gifting industry, LUXERIS provides clear quotations, branding coordination, mockups before production and coordinated fulfilment for businesses that need professional gifts delivered efficiently.</p>
           <div class="stat-row">
             <div class="stat"><b>22+</b> years in gifting</div>
             <div class="stat"><b>Mumbai</b> roots</div>
@@ -568,71 +721,98 @@
 
   <section id="collection">
     <div class="wrap">
-      <p class="section-kicker">Collection</p>
-      <h2 class="section-title">Request a quote. No cart, no guesswork.</h2>
+      <div class="mobile-collection-head">
+        <div>
+          <p class="section-kicker">Explore our gifting options</p>
+          <h2 class="section-title">Explore our gifting options</h2>
+        </div>
+        <a href="#collection" aria-label="See all gifting options">See all <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="desktop-collection-head">
+        <p class="section-kicker">Collection</p>
+        <h2 class="section-title">Get a quote. No cart, no guesswork.</h2>
+      </div>
       <p style="color:var(--muted);margin-top:10px;max-width:40rem">Prices depend on quantity, branding and finish. We quote after a short brief. Product photos include representative samples.</p>
       <div class="prod-grid">
+        <article class="card mobile-order-sweets">
+          <img src="images/diwali-sweets-gift-box-500g.png" alt="Assorted Diwali sweets gift box 500 g">
+          <div class="body">
+                        <h3>Assorted Diwali Sweets Gift Box</h3><span class="mobile-card-title">Dry Fruits &amp; Sweets</span><a class="mobile-card-arrow" href="/diwali-corporate-gifts-mumbai.html" aria-label="View Dry Fruits and Sweets">→</a>
+            <p>Traditional Indian sweets, freshly prepared with pure cow ghee and beautifully packed for Diwali gifting.</p>
+            <p><strong>Available in:</strong> 500 g &bull; Customisable sweet assortment.</p>
+            <p><strong>Finish:</strong> <strong>Matte Lamination box</strong> — matte-laminated finish &bull; <strong>Matte Lamination + UV</strong> — lamination with Spot UV coating.</p>
+            <p><strong>Lead time:</strong> Minimum 12 days in advance.</p>
+            <p><strong>Ideal for:</strong> Corporate gifting &bull; Employee gifts &bull; Client gifting &bull; Festive celebrations.</p>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Assorted Diwali Sweets Gift Box')">Get Quote</a>
+          </div>
+        </article>
+        <article class="card mobile-order-diwali">
+          <img src="images/premium-diwali-dry-fruit-gift-box.png" alt="Premium Diwali dry fruit gift box with almonds walnuts pistachios and cashews">
+          <div class="body">
+                        <h3>Premium Dry Fruit Gift Box</h3><span class="mobile-card-title">Diwali Gifts</span><a class="mobile-card-arrow" href="/diwali-corporate-gifts-mumbai.html" aria-label="View Diwali Gifts">→</a>
+            <p>A thoughtfully curated selection of premium dry fruits, beautifully presented in an elegant festive gift box.</p>
+            <p><strong>Includes:</strong> Almonds &bull; Walnuts &bull; Pistachios &bull; Cashews.</p>
+            <p><strong>Available in:</strong> Multiple pack sizes &bull; Customisable selection and packaging.</p>
+            <p><strong>Lead time:</strong> Minimum 12 days in advance.</p>
+            <p><strong>Ideal for:</strong> Corporate gifting &bull; Employee gifts &bull; Client gifting &bull; Festive celebrations.</p>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Premium Dry Fruit Gift Box')">Get Quote</a>
+          </div>
+        </article>
         <article class="card">
           <img src="images/hero-hamper.jpg" alt="Festive and executive hampers">
           <div class="body">
-            <p class="price">Price on request</p>
-            <h3>Festive &amp; executive hampers</h3>
-            <p>Curated boxes for Diwali, year-end and client thanks. Mix of gourmet, desk and branded pieces.</p>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('Festive & executive hampers')">Request quote</a>
+                        <h3>Festive &amp; executive hampers</h3>
+            <p>Curated corporate gift hampers for year-end celebrations, client appreciation, business milestones and festive occasions. Combine gourmet treats, desk essentials and branded products in a presentation tailored to your budget and recipients.</p>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Festive & executive hampers')">Get Quote</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card mobile-order-executive">
           <img src="images/giftset.jpg" alt="Executive corporate gift sets">
           <div class="body">
-            <p class="price">Price on request</p>
-            <h3>Executive gift sets</h3>
+                        <h3>Executive gift sets</h3><span class="mobile-card-title">Executive Gift Sets</span><a class="mobile-card-arrow" href="/corporate-gift-sets.html" aria-label="View Executive Gift Sets">→</a>
             <p>Bottle, planner, pen and accessory sets, colour-matched and logo-ready for bulk.</p>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('Executive gift sets')">Request quote</a>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Executive gift sets')">Get Quote</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card mobile-order-trophies">
           <img src="images/trophies.jpg" alt="Trophies and mementos">
           <div class="body">
-            <p class="price">Price on request</p>
-            <h3>Trophies &amp; mementos</h3>
+                        <h3>Trophies &amp; mementos</h3><span class="mobile-card-title">Trophies &amp; Mementos</span><a class="mobile-card-arrow" href="/corporate-trophies-awards.html" aria-label="View Trophies and Mementos">→</a>
             <p>Crystal, acrylic and wooden awards with custom engraving for events and recognition nights.</p>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('Trophies & mementos')">Request quote</a>
+            <a class="btn btn-line" href="/corporate-trophies-awards.html">View Trophies &amp; Awards</a>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Trophies & mementos')">Get Quote</a>
           </div>
         </article>
         <article class="card">
           <img src="images/mugs.jpg" alt="Ceramic and polymer coffee mugs">
           <div class="body">
-            <p class="price">Price on request</p>
-            <h3>Ceramic &amp; polymer coffee mugs</h3>
+                        <h3>Ceramic &amp; polymer coffee mugs</h3>
             <p>Ceramic and polymer mugs with your mark. Reliable for office kits and large employee drops.</p>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('Ceramic & polymer coffee mugs')">Request quote</a>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Ceramic & polymer coffee mugs')">Get Quote</a>
           </div>
         </article>
         <article class="card">
           <img src="images/tshirt.jpg" alt="Custom t-shirts and polos">
           <div class="body">
-            <p class="price">Price on request</p>
-            <h3>T-shirts &amp; polos</h3>
+                        <h3>T-shirts &amp; polos</h3>
             <p>Event tees and staff polos. Print or embroidery, sized for teams.</p>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('T-shirts and polos')">Request quote</a>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('T-shirts and polos')">Get Quote</a>
           </div>
         </article>
         <article class="card">
           <img src="images/keychain.jpg" alt="Metal keychains">
           <div class="body">
-            <p class="price">Price on request</p>
-            <h3>Metal keychains</h3>
+                        <h3>Metal keychains</h3>
             <p>Small, durable brand reminders for launches, dealerships and conference bags.</p>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('Metal keychains')">Request quote</a>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Metal keychains')">Get Quote</a>
           </div>
         </article>
         <article class="card">
           <img src="images/umbrella.jpg" alt="Corporate umbrellas">
           <div class="body">
-            <p class="price">Price on request</p>
-            <h3>Corporate umbrellas</h3>
+                        <h3>Corporate umbrellas</h3>
             <p>Monsoon-ready branding that teams actually use. Bulk print available.</p>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('Corporate umbrellas')">Request quote</a>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Corporate umbrellas')">Get Quote</a>
           </div>
         </article>
         <article class="card">
@@ -647,29 +827,31 @@
             <h3>Lenticular luggage tags</h3>
             <p>Two looks in one tag: tilt for the brand face, flip for a contact card. Made for conferences and travel kits.</p>
             <a class="btn btn-line" href="#" onclick="openVideo(); return false;">Play product video</a>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('Lenticular luggage tags')">Request quote</a>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Lenticular luggage tags')">Get Quote</a>
           </div>
         </article>
-        <article class="card">
+        <article class="card mobile-order-calendar">
           <img src="images/calendar.jpg" alt="2027 Customised Yearly Calendar with Panchang and logo branding">
           <div class="body">
             <p class="price">From ₹60 / pc</p>
-            <h3>2027 Customised Yearly Calendar</h3>
+            <h3>2027 Customised Yearly Calendar</h3><span class="mobile-card-title">Customised Calendars</span><a class="mobile-card-arrow" href="/corporate-calendars.html" aria-label="View Customised Calendars">→</a>
             <p>Make your brand visible all year long. 12-sheet calendar with complete Panchang details and customised advertising space. Available in Marathi only.</p>
-            <p style="font-size:.88rem;color:var(--muted);margin-top:4px">300 pcs — ₹70/pc · 500 pcs — ₹65/pc · 1,000 pcs — ₹60/pc<br>Order before 30th September 2026</p>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('2027 Customised Yearly Calendar')">Request quote</a>
+            <p style="font-size:.86rem;color:var(--gold-deep)">300 pcs — ₹70/pc · 500 pcs — ₹65/pc · 1,000 pcs — ₹60/pc</p>
+            <p style="font-size:.86rem;color:var(--gold-deep)">Order before 30th September 2026</p>
+            <a class="btn btn-line" href="/corporate-calendars.html">View calendar details</a>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('2027 Customised Yearly Calendar')">Get Quote</a>
           </div>
         </article>
         <article class="card">
           <img src="images/hero-set.jpg" alt="Custom branded merchandise">
           <div class="body">
-            <p class="price">Price on request</p>
-            <h3>More branded merch</h3>
-            <p>Desk accessories, apparel and other custom items. Share a reference and we will source and brand.</p>
-            <a class="btn btn-gold" href="#quote" onclick="prefill('Other branded merchandise')">Request quote</a>
+                        <h3>More branded merch</h3>
+            <p>Looking for a product you don’t see in our collection? We can help source the right item for your requirement — from desk accessories, apparel and event merchandise to customised corporate products. Share a reference, product idea or requirement and we’ll source, customise and brand it for your business. Ideal for employee kits, conferences, promotions, client gifting and special corporate campaigns.</p>
+            <a class="btn btn-gold" href="#quote" onclick="prefill('Other branded merchandise')">Get Quote</a>
           </div>
         </article>
       </div>
+      <div class="mobile-carousel-dots" aria-label="Gifting options carousel"><button type="button" class="active" aria-label="Show Diwali Gifts"></button><button type="button" aria-label="Show Dry Fruits and Sweets"></button><button type="button" aria-label="Show Executive Gift Sets"></button><button type="button" aria-label="Show Customised Calendars"></button><button type="button" aria-label="Show Trophies and Mementos"></button></div>
     </div>
   </section>
 
@@ -688,34 +870,56 @@
 
   <section>
     <div class="wrap">
-      <p class="section-kicker">Client notes</p>
-      <h2 class="section-title">Clear quotes. On-time boxes.</h2>
-      <p style="color:var(--muted);margin-top:8px;max-width:40rem">Feedback from recent orders (WhatsApp / email). This site does not host public comments.</p>
+      <p class="section-kicker">Corporate requirements</p>
+      <h2 class="section-title">Built around the brief. Delivered with care.</h2>
+      <p style="color:var(--muted);margin-top:8px;max-width:44rem">Common corporate gifting requirements we support across employee, client, event and recognition programmes. Share your quantity, budget, branding and delivery timeline and we will help shortlist the right options.</p>
       <div class="rev-grid">
         <blockquote class="rev">
-          <p>“We needed 400 Diwali sets for two Mumbai offices. Options came the same day and the finish was consistent across the lot.”</p>
-          <div class="who">Priya S. · HR, Mumbai</div>
+          <p><strong>Employee onboarding kits</strong><br>Useful, branded combinations such as bottles, notebooks, pens, desk accessories and other essentials, planned around the joining quantity and budget.</p>
+          <div class="who">For HR &amp; People teams</div>
         </blockquote>
         <blockquote class="rev">
-          <p>“Used Luxeris for a conference kit: umbrellas, tags and a small desk set. Branding was clean and delivery hit the venue window.”</p>
-          <div class="who">Rohan M. · Admin, Navi Mumbai</div>
+          <p><strong>Conference &amp; event merchandise</strong><br>Branded T-shirts, polos, umbrellas, luggage tags, mugs and other event-ready products coordinated for conferences, campaigns and corporate activities.</p>
+          <div class="who">For Events &amp; Marketing teams</div>
         </blockquote>
         <blockquote class="rev">
-          <p>“Joining kits for a 60-person onboarding. They kept it simple and the new joiners actually used the bottles.”</p>
-          <div class="who">Anjali K. · People team, Mumbai</div>
+          <p><strong>Client &amp; business partner gifting</strong><br>Executive gift sets, premium hampers, dry fruits, sweets and customised presentation options selected to suit the recipient, occasion and budget.</p>
+          <div class="who">For Sales, Admin &amp; Procurement teams</div>
         </blockquote>
         <blockquote class="rev">
-          <p>“Quoted three budget bands without pushing the most expensive box. Helpful when procurement has a hard ceiling.”</p>
-          <div class="who">Vikram D. · Procurement, Pune</div>
+          <p><strong>Employee recognition &amp; awards</strong><br>Crystal, acrylic and wooden trophies and mementos with customised names, award wording and company identity for recognition programmes and corporate events.</p>
+          <div class="who">For HR &amp; Corporate Events</div>
         </blockquote>
       </div>
+    </div>
+  </section>
+
+  <section style="background:var(--paper)">
+    <div class="wrap">
+      <p class="section-kicker">Corporate gift guides</p>
+      <h2 class="section-title">Practical guides for corporate gifting.</h2>
+      <p style="color:var(--muted);margin-top:8px;max-width:44rem">Useful buying guides for teams planning employee, client and festive gifting. Start with our Diwali guide for employee gifts around a ₹500 per-person budget.</p>
+      <div class="rev-grid" style="margin-top:22px">
+        <article class="rev">
+          <p><strong>Corporate Diwali Gifts for Employees Under ₹500</strong><br>Practical options, branding and packaging considerations for planning employee Diwali gifts around a ₹500 per-person target.</p>
+          <div class="who"><a href="/corporate-diwali-gifts-under-500.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Read the guide →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mobile-final-cta" aria-label="Custom corporate gifting requirement">
+    <div>
+      <span class="mobile-cta-icon" aria-hidden="true">•••</span>
+      <div><h2>Have a specific requirement?</h2><p>Tell us your requirement and we’ll suggest the right options.</p></div>
+      <a class="mobile-whatsapp-cta" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20have%20a%20specific%20corporate%20gifting%20requirement." target="_blank" rel="noopener">Chat on WhatsApp <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <section id="quote">
     <div class="wrap">
       <p class="section-kicker" style="text-align:center">Get in touch</p>
-      <h2 class="section-title" style="text-align:center">Request a quote</h2>
+      <h2 class="section-title" style="text-align:center">Get a quote</h2>
       <p style="text-align:center;color:var(--muted);margin-top:8px">We reply on WhatsApp. Usually the same business day.</p>
       <div class="quote">
         <form onsubmit="sendQuote(event)">
@@ -752,7 +956,7 @@
         <div>
           <h2>LUXERIS</h2>
           <p style="margin-top:12px">Corporate gifting for Mumbai: hampers, executive sets and branded merchandise.</p>
-          <p style="margin-top:10px">3rd Bhoiwada Road, Bhuleshwar, Mumbai 400002<br>Serving Mumbai, Navi Mumbai, Thane &amp; pan-India</p>
+          <p style="margin-top:10px">3rd Bhoiwada Road, Bhuleshwar, Mumbai 400002, Maharashtra<br>Serving Mumbai, Navi Mumbai, Thane &amp; pan-India</p>
         </div>
         <div>
           <strong style="color:#f3e6c6">Contact</strong>
@@ -763,6 +967,7 @@
         <div>
           <strong style="color:#f3e6c6">Site</strong>
           <p><a href="#collection">Collection</a></p>
+          <p><a href="/corporate-diwali-gifts-under-500.html">Corporate Gift Guides</a></p>
           <p><a href="#quote">Get a quote</a></p>
           <p><a href="privacy.html">Privacy</a></p>
         </div>
@@ -779,7 +984,7 @@
       </video>
       <h3>Lenticular luggage tags</h3>
       <p style="color:var(--muted)">Brand on one face, contact details on the other. A recent bulk order. Same process for your logo.</p>
-      <a class="btn btn-gold" href="#quote" style="width:100%;margin-top:12px" onclick="closeVideo(); prefill('Lenticular luggage tags')">Request a quote</a>
+      <a class="btn btn-gold" href="#quote" style="width:100%;margin-top:12px" onclick="closeVideo(); prefill('Lenticular luggage tags')">Get a quote</a>
     </div>
   </div>
 
@@ -789,7 +994,7 @@
       <img id="productModalImg" src="" alt="">
       <div class="product-meta">
         <h3 id="productModalTitle"></h3>
-        <a class="btn btn-gold" id="productModalQuote" href="#quote" onclick="closeProduct()">Request quote</a>
+        <a class="btn btn-gold" id="productModalQuote" href="#quote" onclick="closeProduct()">Get Quote</a>
       </div>
     </div>
   </div>
@@ -808,23 +1013,6 @@
     mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       mobileMenu.style.display = 'none';
     }));
-
-    (function () {
-      const scroller = document.getElementById('mcScroll');
-      const dots = document.querySelectorAll('#mcDots .dot');
-      if (!scroller || !dots.length) return;
-      const cards = scroller.querySelectorAll('.mc-card');
-      function updateDots() {
-        const scrollLeft = scroller.scrollLeft;
-        let idx = 0, min = Infinity;
-        cards.forEach((c, i) => {
-          const d = Math.abs(c.offsetLeft - scrollLeft);
-          if (d < min) { min = d; idx = i; }
-        });
-        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-      }
-      scroller.addEventListener('scroll', () => window.requestAnimationFrame(updateDots), { passive: true });
-    })();
 
     function prefill(product) {
       document.getElementById('product').value = product;
@@ -916,5 +1104,362 @@
       window.open('https://wa.me/919820810040?text=' + encodeURIComponent(text), '_blank');
     }
   </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const carousel = document.querySelector('#collection .prod-grid');
+  const dots = document.querySelectorAll('.mobile-carousel-dots button');
+  if (!carousel || !dots.length) return;
+  const mobileQuery = window.matchMedia('(max-width: 700px)');
+  let timer = null, paused = false;
+  const targets = ['.mobile-order-diwali','.mobile-order-sweets','.mobile-order-executive','.mobile-order-calendar','.mobile-order-trophies'];
+  function goTo(i) {
+    if (!mobileQuery.matches) return;
+    const card = carousel.querySelector(targets[i]);
+    if (!card) return;
+    carousel.scrollTo({left: card.offsetLeft - 14, behavior:'smooth'});
+    dots.forEach((d,n)=>d.classList.toggle('active', n===i));
+  }
+  dots.forEach((d,i)=>d.addEventListener('click',()=>{ paused=true; goTo(i); clearTimeout(timer); setTimeout(()=>paused=false,5000); }));
+  function start() {
+    clearInterval(timer);
+    if (!mobileQuery.matches) return;
+    let i=0;
+    timer=setInterval(()=>{ if (!paused) { i=(i+1)%targets.length; goTo(i); } }, 4200);
+  }
+  carousel.addEventListener('touchstart',()=>{paused=true;},{passive:true});
+  carousel.addEventListener('touchend',()=>{clearTimeout(timer);setTimeout(()=>{paused=false;start();},3500);},{passive:true});
+  start();
+});
+</script>
 </body>
 </html>
+
+<style>
+@media (max-width: 390px) {
+  .nav-inner .brand { max-width: 38vw; }
+  .brand h1 { font-size: 1.05rem; letter-spacing: .17em; }
+  .brand p { font-size: .36rem; letter-spacing: .08em; }
+  .mobile-nav-quote { width: 104px; font-size: .66rem; }
+  .hero { grid-template-columns: minmax(0,.98fr) minmax(0,1.02fr); gap:8px; }
+  .mobile-hero-copy h2 { font-size: 1.62rem; }
+  .mobile-hero-copy > p { font-size:.62rem; }
+  #collection .card { flex-basis: 126px; }
+}
+</style>
+
+
+<style>
+/* FINAL MOBILE REFERENCE MATCH — desktop is untouched */
+@media (max-width:700px) {
+  html, body { width:100%; max-width:100%; overflow-x:hidden; }
+  body { background:#fffdf8; }
+
+  /* Header: three clean zones, no logo/button overlap */
+  nav { background:#fffdf8; border-bottom:1px solid #e8dcc6; position:sticky; top:0; z-index:40; }
+  .nav-inner {
+    width:100% !important;
+    min-height:78px !important;
+    padding:0 12px;
+    display:grid !important;
+    grid-template-columns:52px minmax(0,1fr) 128px;
+    align-items:center;
+    gap:8px;
+  }
+  .nav-inner .brand {
+    position:static !important;
+    transform:none !important;
+    grid-column:2;
+    grid-row:1;
+    justify-self:center;
+    width:100%;
+    max-width:none !important;
+    text-align:center;
+    white-space:nowrap;
+  }
+  .brand h1 {
+    font-size:clamp(1.25rem,6vw,1.65rem) !important;
+    letter-spacing:.25em !important;
+    line-height:1 !important;
+  }
+  .brand p {
+    margin-top:5px !important;
+    font-size:.43rem !important;
+    letter-spacing:.14em !important;
+    white-space:nowrap;
+  }
+  .hamburger {
+    grid-column:1;
+    grid-row:1;
+    display:block !important;
+    width:52px !important;
+    height:52px !important;
+    border-radius:15px !important;
+    justify-self:start;
+  }
+  .hamburger span { width:27px !important; height:2px !important; margin:6px auto !important; }
+  .mobile-nav-quote {
+    grid-column:3;
+    grid-row:1;
+    width:128px !important;
+    min-height:48px !important;
+    justify-self:end;
+    padding:0 8px !important;
+    font-size:.74rem !important;
+    border-radius:999px !important;
+    letter-spacing:0;
+  }
+
+  /* Hero: compact two-column composition like the reference */
+  .hero {
+    width:100% !important;
+    padding:38px 20px 30px !important;
+    display:grid !important;
+    grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr) !important;
+    gap:14px !important;
+    align-items:center !important;
+    min-height:0 !important;
+    background:#fffdf8;
+  }
+  .desktop-hero-copy { display:none !important; }
+  .mobile-hero-copy {
+    display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    min-width:0;
+    padding:0 !important;
+  }
+  .mobile-hero-copy h2 {
+    font-family:"Cormorant Garamond",Georgia,serif !important;
+    font-weight:500 !important;
+    font-size:clamp(2.05rem,7.1vw,3.65rem) !important;
+    line-height:.94 !important;
+    letter-spacing:-.025em !important;
+    color:#1c1610;
+  }
+  .mobile-hero-copy > p {
+    margin-top:20px !important;
+    font-size:clamp(.78rem,2.15vw,1rem) !important;
+    line-height:1.48 !important;
+    color:#5c5348 !important;
+  }
+  .mobile-hero-actions { margin-top:20px !important; display:block !important; }
+  .mobile-hero-actions .btn {
+    width:100% !important;
+    min-height:58px !important;
+    padding:.8rem .7rem !important;
+    font-size:clamp(.78rem,2.3vw,1rem) !important;
+    white-space:nowrap !important;
+    gap:7px;
+  }
+  .mobile-wa-symbol {
+    font-size:.95rem;
+    line-height:1;
+    display:inline-block;
+  }
+  .hero-img {
+    width:100% !important;
+    height:clamp(330px,57vw,600px) !important;
+    min-height:0 !important;
+    max-height:none !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    border-radius:28px !important;
+    box-shadow:0 16px 42px rgba(28,22,16,.10) !important;
+  }
+
+  /* Benefits: clean three-column band */
+  .mobile-benefits {
+    display:grid !important;
+    grid-template-columns:repeat(3,1fr) !important;
+    padding:28px 12px 30px !important;
+    background:#fff !important;
+    border-top:1px solid #e8dcc6 !important;
+    border-bottom:1px solid #e8dcc6 !important;
+  }
+  .mobile-benefits > div {
+    min-height:94px;
+    padding:0 8px !important;
+    gap:9px !important;
+  }
+  .benefit-icon {
+    width:42px !important;
+    height:42px !important;
+    font-size:2.25rem !important;
+    color:#8a6424 !important;
+  }
+  .mobile-benefits strong {
+    font-size:clamp(.68rem,2vw,.9rem) !important;
+    line-height:1.2 !important;
+    font-weight:500 !important;
+  }
+
+  /* Collection: reference-style heading + horizontal cards */
+  #collection {
+    padding:38px 0 20px !important;
+    background:#fffdf8;
+  }
+  #collection > .wrap {
+    width:100% !important;
+  }
+  .mobile-collection-head {
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    padding:0 22px !important;
+  }
+  .mobile-collection-head .section-kicker {
+    margin:0 !important;
+    font-size:clamp(.62rem,1.8vw,.82rem) !important;
+    letter-spacing:.22em !important;
+    color:#17324b !important;
+    text-transform:uppercase;
+  }
+  .mobile-collection-head .section-title { display:none !important; }
+  .mobile-collection-head > a {
+    font-size:clamp(.78rem,2.2vw,1rem) !important;
+    color:#8a6424 !important;
+    padding:0 !important;
+    white-space:nowrap;
+  }
+  #collection > .wrap > .desktop-collection-head,
+  #collection > .wrap > p:not(.mobile-carousel-note),
+  #collection > .wrap > .desktop-collection-head + p { display:none !important; }
+
+  #collection .prod-grid {
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    gap:12px !important;
+    margin:24px 0 0 !important;
+    padding:0 12px 10px !important;
+    scroll-snap-type:x mandatory !important;
+    scroll-padding-left:12px !important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  #collection .prod-grid::-webkit-scrollbar { display:none; }
+  #collection .card {
+    flex:0 0 clamp(145px,22vw,224px) !important;
+    width:clamp(145px,22vw,224px) !important;
+    height:clamp(245px,38vw,355px) !important;
+    min-height:0 !important;
+    border-radius:16px !important;
+    overflow:hidden !important;
+    background:#fff !important;
+    box-shadow:0 8px 24px rgba(28,22,16,.08) !important;
+    scroll-snap-align:start !important;
+  }
+  #collection .card img {
+    width:100% !important;
+    height:clamp(170px,27.5vw,260px) !important;
+    padding:0 !important;
+    object-fit:cover !important;
+    display:block;
+  }
+  #collection .card .body {
+    padding:13px 12px !important;
+    min-height:0 !important;
+  }
+  #collection .mobile-card-title {
+    display:block !important;
+    font-family:inherit !important;
+    font-size:clamp(.86rem,2.2vw,1.05rem) !important;
+    line-height:1.08 !important;
+    font-weight:500 !important;
+    padding-right:42px !important;
+    color:#10263a !important;
+  }
+  #collection .mobile-card-arrow {
+    display:grid !important;
+    width:38px !important;
+    height:38px !important;
+    right:10px !important;
+    bottom:9px !important;
+    border:1px solid #b8893a !important;
+    color:#17324b !important;
+    font-size:1.25rem !important;
+    background:#fff !important;
+  }
+  #collection .mobile-order-diwali { order:1 !important; }
+  #collection .mobile-order-sweets { order:2 !important; }
+  #collection .mobile-order-executive { order:3 !important; }
+  #collection .mobile-order-calendar { order:4 !important; }
+  #collection .mobile-order-trophies { order:5 !important; }
+  #collection .mobile-carousel-dots {
+    display:flex !important;
+    justify-content:center !important;
+    gap:9px !important;
+    margin:13px 0 0 !important;
+  }
+  #collection .mobile-carousel-dots button {
+    width:9px !important;
+    height:9px !important;
+    padding:0 !important;
+  }
+  #collection .mobile-carousel-dots button.active {
+    width:10px !important;
+    height:10px !important;
+  }
+
+  /* Reference CTA directly after the carousel */
+  .mobile-final-cta {
+    display:block !important;
+    padding:28px 0 36px !important;
+    background:#fffdf8;
+  }
+  .mobile-final-cta > div {
+    width:calc(100% - 28px) !important;
+    margin:0 auto !important;
+    padding:24px 18px !important;
+    border-radius:24px !important;
+    display:grid !important;
+    grid-template-columns:48px 1fr !important;
+    gap:8px 12px !important;
+    background:#fbf4e9 !important;
+    border:1px solid #e8dcc6 !important;
+  }
+  .mobile-cta-icon {
+    width:44px !important;
+    height:44px !important;
+  }
+  .mobile-final-cta h2 {
+    font-size:clamp(1.45rem,5.5vw,2rem) !important;
+    line-height:1 !important;
+  }
+  .mobile-final-cta p {
+    font-size:clamp(.7rem,2.1vw,.88rem) !important;
+  }
+  .mobile-whatsapp-cta {
+    min-height:52px !important;
+    margin-top:10px !important;
+    font-size:clamp(.82rem,2.4vw,1rem) !important;
+  }
+
+  /* Keep the remaining desktop sections below the mobile reference block. */
+  body > #about,
+  body > #occasions,
+  body > #process,
+  body > .rev-grid,
+  body > #quote,
+  body > footer { order:10; }
+}
+
+@media (max-width:390px) {
+  .nav-inner { grid-template-columns:48px minmax(0,1fr) 112px; gap:5px; padding:0 8px; }
+  .hamburger { width:48px !important; height:48px !important; }
+  .mobile-nav-quote { width:112px !important; font-size:.67rem !important; }
+  .hero { padding:28px 14px 24px !important; gap:9px !important; }
+  .mobile-hero-copy h2 { font-size:1.82rem !important; }
+  .mobile-hero-copy > p { font-size:.66rem !important; margin-top:14px !important; }
+  .mobile-hero-actions { margin-top:14px !important; }
+  .mobile-hero-actions .btn { min-height:50px !important; font-size:.68rem !important; }
+  .hero-img { height:300px !important; border-radius:22px !important; }
+  #collection .prod-grid { gap:10px !important; padding-left:10px !important; padding-right:10px !important; }
+  #collection .card { flex-basis:136px !important; width:136px !important; height:225px !important; }
+  #collection .card img { height:158px !important; }
+  #collection .mobile-card-title { font-size:.82rem !important; }
+}
+</style>
