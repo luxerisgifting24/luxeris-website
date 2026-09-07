@@ -398,222 +398,79 @@
       .wrap { width: calc(100% - 28px); }
       .nav-inner { width: calc(100% - 20px); }
     }
-
-    /* Mobile-first premium presentation: desktop structure/content remains unchanged. */
-    .mobile-nav-quote, .mobile-hero-copy, .mobile-benefits, .mobile-collection-head,
-    .mobile-card-title, .mobile-card-arrow, .mobile-final-cta { display: none; }
-
-    @media (max-width: 700px) {
-      body { overflow-x: hidden; background: var(--cream); }
-      nav { position: sticky; top: 0; }
-      .nav-inner { position: relative; min-height: 70px; width: calc(100% - 20px); gap: 6px; }
-      .nav-inner .brand { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; white-space: nowrap; max-width: 42vw; }
-      .brand h1 { font-size: clamp(1.15rem, 5.2vw, 1.55rem); letter-spacing: .22em; }
-      .brand p { font-size: .42rem; letter-spacing: .11em; overflow:hidden; text-overflow:clip; }
-      .nav-links { display: none; }
-      .hamburger { display: inline-block; order: 1; flex: 0 0 44px; z-index: 2; }
-      .mobile-nav-quote { display: inline-flex; order: 3; margin-left: auto; align-items: center; justify-content: center; min-height: 42px; width: clamp(108px, 28vw, 145px); padding: 0 10px; border-radius: 999px; background: linear-gradient(120deg,#8a6424,#c9a45c); color:#140f0a; font-size:.70rem; text-decoration:none; white-space:nowrap; z-index:2; }
-
-      .hero { width: calc(100% - 20px); min-height: 0; padding: 20px 0 18px; display: grid; grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr); gap: 10px; align-items: center; }
-      .desktop-hero-copy { display: none; }
-      .mobile-hero-copy { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: 4px 0 4px 2px; }
-      .mobile-hero-copy h2 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:500; font-size: clamp(1.75rem, 7.2vw, 2.45rem); line-height:1.02; letter-spacing:-.025em; }
-      .mobile-hero-copy > p { margin-top:12px; color:var(--muted); font-size:.68rem; line-height:1.45; }
-      .mobile-hero-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
-      .mobile-hero-actions .btn { min-height:40px; padding:.65rem .72rem; font-size:.68rem; white-space:nowrap; }
-      .hero-img { width:100%; height:100%; max-height:none; min-height:250px; object-fit:cover; object-position:center; border-radius:20px; }
-      .hero-meta { display:none; }
-      .hero-actions { display:none; }
-
-      .strip { display:none; }
-      body { display:flex; flex-direction:column; }
-      body > * { order:10; }
-      body > nav { order:1; }
-      body > .hero { order:2; }
-      body > .mobile-benefits { order:3; }
-      body > #collection { order:4; }
-      body > .mobile-final-cta { order:5; }
-      .mobile-benefits { display:grid; grid-template-columns:repeat(3,1fr); background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:20px 8px; }
-      .mobile-benefits > div { min-width:0; text-align:center; padding:0 5px; border-right:1px solid var(--line); display:flex; flex-direction:column; align-items:center; gap:6px; }
-      .mobile-benefits > div:last-child { border-right:0; }
-      .benefit-icon { width:30px; height:30px; display:grid; place-items:center; color:var(--gold-deep); font-family:Georgia,serif; font-size:1.8rem; line-height:1; }
-      .mobile-benefits strong { font-size:.66rem; line-height:1.2; font-weight:500; color:var(--ink); }
-
-      #collection { padding:38px 0 28px; }
-      #collection > .wrap { width:calc(100% - 28px); }
-      .desktop-collection-head, #collection > .wrap > .desktop-collection-head + p { display:none; }
-      .mobile-collection-head { display:flex; align-items:end; justify-content:space-between; gap:12px; }
-      .mobile-collection-head .section-kicker { margin-bottom:6px; font-size:.58rem; }
-      .mobile-collection-head .section-title { font-size:1.65rem; line-height:1; }
-      .mobile-collection-head > a { flex:0 0 auto; text-decoration:none; color:var(--gold-deep); font-size:.82rem; padding-bottom:3px; }
-
-      #collection .prod-grid { display:flex; overflow-x:auto; overflow-y:hidden; gap:10px; margin:20px -14px 0; padding:0 14px 8px; scroll-snap-type:x mandatory; scroll-padding-left:14px; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
-      #collection .prod-grid::-webkit-scrollbar { display:none; }
-      #collection .card { position:relative; flex:0 0 clamp(122px, 22vw, 170px); max-width:none; min-height:0; height:205px; border-radius:18px; scroll-snap-align:start; overflow:hidden; box-shadow:0 10px 30px rgba(28,22,16,.08); }
-      #collection .card img { height:145px; width:100%; padding:0; object-fit:cover; background:#f7f1e6; cursor:pointer; }
-      #collection .card .body { position:relative; padding:10px 10px; min-height:60px; }
-      #collection .card h3, #collection .card p, #collection .card .price, #collection .card .body > .btn { display:none; }
-      #collection .mobile-card-title { display:block; font-family:"Cormorant Garamond",Georgia,serif; font-size:1.02rem; line-height:1.02; padding-right:34px; }
-      #collection .mobile-card-arrow { display:grid; place-items:center; position:absolute; right:8px; bottom:8px; width:30px; height:30px; border:1px solid var(--gold); border-radius:50%; text-decoration:none; color:var(--gold-deep); font-size:1.05rem; background:var(--white); }
-      #collection .mobile-order-diwali { order:1; }
-      #collection .mobile-order-sweets { order:2; }
-      #collection .mobile-order-executive { order:3; }
-      #collection .mobile-order-calendar { order:4; }
-      #collection .mobile-order-trophies { order:5; }
-      #collection .card:not(.mobile-order-diwali):not(.mobile-order-sweets):not(.mobile-order-executive):not(.mobile-order-calendar):not(.mobile-order-trophies) { order:20; }
-      #collection .prod-grid::after { content:''; flex:0 0 2px; }
-      #collection .prod-grid::before { content:''; }
-      #collection .mobile-carousel-note { display:flex; justify-content:center; margin-top:4px; font-size:.68rem; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; }
-      #collection .mobile-carousel-note::after { content:'  Swipe →'; }
-
-      .mobile-final-cta { display:block; padding:0 0 30px; }
-      .mobile-final-cta > div { width:calc(100% - 28px); margin:0 auto; background:#fbf4e9; border:1px solid var(--line); border-radius:24px; padding:20px 18px; display:grid; grid-template-columns:42px 1fr; gap:8px 12px; align-items:center; }
-      .mobile-cta-icon { width:38px; height:38px; border:2px solid var(--gold-deep); border-radius:14px; display:grid; place-items:center; color:var(--gold-deep); letter-spacing:2px; font-size:.7rem; }
-      .mobile-final-cta h2 { font-family:"Cormorant Garamond",Georgia,serif; font-size:1.65rem; line-height:1; font-weight:500; }
-      .mobile-final-cta p { color:var(--muted); font-size:.74rem; line-height:1.35; margin-top:4px; }
-      .mobile-whatsapp-cta { grid-column:1 / -1; margin-top:8px; min-height:48px; border-radius:999px; display:flex; align-items:center; justify-content:center; gap:8px; background:#25d366; color:#fff; text-decoration:none; font-size:.9rem; }
-
-      /* Keep the rest of the existing homepage readable and spacious on phones. */
-      section { padding:48px 0; }
-      .about-card { padding:22px; border-radius:22px; }
-      .about-grid { gap:20px; }
-      .occ-grid, .step-grid, .rev-grid, .faq-grid { grid-template-columns:1fr; }
-      .section-title { font-size:2rem; line-height:1.05; }
-      .foot-grid { grid-template-columns:1fr; gap:20px; }
-    }
-
-    @media (min-width: 701px) {
-      .desktop-hero-copy { display:block; }
-      .desktop-collection-head { display:block; }
-    }
-
-    @media (max-width: 700px) {
-      .mobile-wa-icon { font-size: 1rem; line-height: 1; margin-right: 2px; }
-      .mobile-carousel-dots { display:flex; justify-content:center; align-items:center; gap:7px; margin-top:8px; }
-      .mobile-carousel-dots button { width:8px; height:8px; border:0; border-radius:50%; background:#ddd7cd; padding:0; }
-      .mobile-carousel-dots button.active { width:9px; height:9px; background:var(--gold-deep); }
-    }
-    @media (min-width: 701px) { .mobile-carousel-dots { display:none; } }
   </style>
 
-<style>
-/* FINAL MOBILE GIFTING CAROUSEL — desktop remains unchanged */
-@media (max-width:700px) {
+<style id="luxeris-mobile-reference-final">
+/* FINAL MOBILE PRESENTATION — desktop layout/content remains unchanged */
+.mobile-nav-quote,.mobile-collection-head,.mobile-card-title,.mobile-card-arrow,.mobile-carousel-dots{display:none}
+@media (max-width:700px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  nav{min-height:76px!important}
+  .nav-inner{position:relative;width:100%!important;min-height:76px!important;padding:0 16px!important;gap:8px}
+  .nav-inner .brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;white-space:nowrap;max-width:46vw;z-index:1}
+  .brand h1{font-size:clamp(1.2rem,5.8vw,1.55rem)!important;letter-spacing:.24em!important}
+  .brand p{font-size:.43rem!important;letter-spacing:.11em!important}
+  .nav-links{display:none!important}
+  .hamburger{display:flex!important;order:1;position:relative;z-index:3;flex:0 0 48px;width:48px;height:48px;align-items:center;justify-content:center;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:16px;background:var(--cream);padding:0}
+  .hamburger span{display:block;width:25px;height:2px;background:var(--ink);border-radius:2px}
+  .mobile-nav-quote{display:inline-flex!important;order:3;margin-left:auto;position:relative;z-index:3;align-items:center;justify-content:center;width:clamp(118px,31vw,150px);height:46px;padding:0 12px;border-radius:999px;background:linear-gradient(120deg,#8a6424,#c9a45c);color:#fff;text-decoration:none;font-size:.76rem;font-weight:500;white-space:nowrap;box-shadow:0 6px 18px rgba(138,100,36,.16)}
 
-  /* Replace the three benefit boxes with the gifting-options section */
-  .mobile-benefits {
-    display:none !important;
-  }
+  /* Hero: same desktop headline and description, only the presentation changes on mobile. */
+  body>.hero{width:100%!important;min-height:0!important;padding:28px 20px 24px!important;display:grid!important;grid-template-columns:minmax(0,.94fr) minmax(0,1.06fr)!important;gap:14px!important;align-items:center!important}
+  body>.hero>div{min-width:0}
+  body>.hero .display{font-size:clamp(1.75rem,7.3vw,2.7rem)!important;line-height:1.02!important;letter-spacing:-.02em!important;overflow-wrap:normal!important}
+  body>.hero .lead{margin-top:14px!important;font-size:.70rem!important;line-height:1.5!important}
+  body>.hero .hero-actions{display:flex!important;flex-direction:row!important;align-items:stretch!important;margin-top:14px!important;gap:8px!important}
+  body>.hero .hero-actions .btn:first-child{display:none!important}
+  body>.hero .hero-actions .btn{width:auto!important;min-width:0!important;min-height:46px!important;padding:.72rem .9rem!important;font-size:.70rem!important;white-space:nowrap!important}
+  body>.hero .hero-meta{display:none!important}
+  body>.hero .hero-img{width:100%!important;height:clamp(330px,92vw,440px)!important;max-height:none!important;min-height:0!important;object-fit:cover!important;object-position:center!important;border-radius:26px!important;box-shadow:0 14px 36px rgba(28,22,16,.10)!important}
+  .strip{display:none!important}
 
-  /* Bring gifting options immediately after the hero */
-  #collection {
-    margin-top:0 !important;
-    padding-top:34px !important;
-  }
+  /* The gifting carousel replaces the three-benefit strip on mobile. */
+  body>.mobile-benefits{display:none!important}
+  body>#collection{order:3!important;width:100%!important;margin:0!important;padding:22px 0 26px!important;background:var(--cream)!important}
+  body>#about,body>#occasions,body>#process,body>#quote,body>footer{order:10}
+  #collection>.wrap{width:100%!important;max-width:none!important}
+  .mobile-collection-head{display:flex!important;align-items:flex-end;justify-content:space-between;gap:12px;padding:0 20px!important}
+  .mobile-collection-head .section-kicker{font-size:.64rem!important;letter-spacing:.20em!important;color:#17324b!important;margin:0!important;white-space:nowrap}
+  .mobile-collection-head>a{flex:0 0 auto;text-decoration:none;color:var(--gold-deep);font-size:.92rem;padding:0}
+  .desktop-collection-kicker,#collection>.wrap>.section-title,#collection>.wrap>.desktop-collection-head,#collection>.wrap>.desktop-collection-head+p{display:none!important}
+  #collection .prod-grid{display:flex!important;flex-wrap:nowrap!important;width:100%!important;overflow-x:auto!important;overflow-y:hidden!important;gap:12px!important;margin:20px 0 0!important;padding:0 16px 8px!important;scroll-snap-type:x mandatory!important;scroll-padding-left:16px!important;-webkit-overflow-scrolling:touch!important;scrollbar-width:none!important}
+  #collection .prod-grid::-webkit-scrollbar{display:none!important}
+  #collection .card{display:block!important;flex:0 0 46vw!important;width:46vw!important;height:clamp(235px,62vw,285px)!important;min-height:0!important;margin:0!important;border:1px solid #e8dcc7!important;border-radius:22px!important;overflow:hidden!important;background:#fff!important;box-shadow:0 8px 26px rgba(28,22,16,.08)!important;scroll-snap-align:start!important}
+  #collection .prod-grid>.card:not(.mobile-order-diwali):not(.mobile-order-sweets):not(.mobile-order-executive):not(.mobile-order-calendar):not(.mobile-order-trophies){display:none!important}
+  #collection .mobile-order-diwali{order:1!important}
+  #collection .mobile-order-sweets{order:2!important}
+  #collection .mobile-order-executive{order:3!important}
+  #collection .mobile-order-calendar{order:4!important}
+  #collection .mobile-order-trophies{order:5!important}
+  #collection .card img{display:block!important;width:100%!important;height:42vw!important;max-height:190px!important;min-height:145px!important;padding:0!important;object-fit:cover!important;background:#f7f1e6!important}
+  #collection .card .body{position:relative!important;min-height:0!important;padding:12px 12px!important}
+  #collection .card h3,#collection .card p,#collection .card .price,#collection .card .body>.btn,#collection .card .linkish{display:none!important}
+  #collection .mobile-card-title{display:block!important;font-family:Outfit,system-ui,sans-serif!important;color:#10263a!important;font-size:1rem!important;line-height:1.08!important;font-weight:500!important;padding-right:48px!important}
+  #collection .mobile-card-arrow{display:grid!important;place-items:center!important;position:absolute!important;right:10px!important;bottom:9px!important;width:42px!important;height:42px!important;border:1px solid #b8893a!important;border-radius:50%!important;background:#fff!important;color:#17324b!important;text-decoration:none!important;font-size:1.25rem!important}
+  .mobile-carousel-dots{display:flex!important;justify-content:center;align-items:center;gap:9px;margin-top:11px!important;height:14px}
+  .mobile-carousel-dots button{width:10px;height:10px;border:0;border-radius:50%;padding:0;background:#ddd7cd}
+  .mobile-carousel-dots button.active{background:var(--gold-deep)}
+  #collection:after{content:'Tell us your requirement and we’ll suggest the right options.';display:block;margin:17px 20px 0;text-align:center;color:var(--muted);font-size:.68rem;line-height:1.4}
 
-  /* Reference-style heading */
-  .mobile-collection-head {
-    padding:0 22px !important;
-  }
-  .mobile-collection-head .section-kicker {
-    font-size:clamp(.72rem,2.6vw,1rem) !important;
-    letter-spacing:.20em !important;
-    font-weight:500 !important;
-  }
-
-  /* Horizontal swipe carousel */
-  #collection .prod-grid {
-    display:flex !important;
-    flex-wrap:nowrap !important;
-    overflow-x:auto !important;
-    scroll-snap-type:x mandatory !important;
-    gap:12px !important;
-    padding:0 14px 8px !important;
-    margin-top:24px !important;
-    scrollbar-width:none !important;
-  }
-  #collection .prod-grid::-webkit-scrollbar {
-    display:none !important;
-  }
-
-  #collection .card {
-    flex:0 0 clamp(150px,42vw,205px) !important;
-    width:clamp(150px,42vw,205px) !important;
-    height:clamp(250px,64vw,330px) !important;
-    scroll-snap-align:start !important;
-    border-radius:20px !important;
-  }
-
-  #collection .card img {
-    height:clamp(170px,47vw,245px) !important;
-    object-fit:cover !important;
-    padding:0 !important;
-  }
-
-  #collection .card .body {
-    padding:12px 12px !important;
-  }
-
-  #collection .mobile-card-title {
-    font-family:"Outfit",system-ui,sans-serif !important;
-    font-size:clamp(.86rem,2.7vw,1rem) !important;
-    line-height:1.08 !important;
-    font-weight:500 !important;
-    color:#10263a !important;
-    padding-right:44px !important;
-  }
-
-  #collection .mobile-card-arrow {
-    width:40px !important;
-    height:40px !important;
-    right:9px !important;
-    bottom:8px !important;
-    border:1px solid #b8893a !important;
-    color:#17324b !important;
-    background:#fff !important;
-  }
-
-  /* Exact mobile order */
-  #collection .mobile-order-diwali { order:1 !important; }
-  #collection .mobile-order-sweets { order:2 !important; }
-  #collection .mobile-order-executive { order:3 !important; }
-  #collection .mobile-order-calendar { order:4 !important; }
-  #collection .mobile-order-trophies { order:5 !important; }
-
-  /* Do not show the other catalogue cards in the mobile carousel */
-  #collection .prod-grid > .card:not(.mobile-order-diwali):not(.mobile-order-sweets):not(.mobile-order-executive):not(.mobile-order-calendar):not(.mobile-order-trophies) {
-    display:none !important;
-  }
-
-  /* Dots */
-  #collection .mobile-carousel-dots {
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-    gap:9px !important;
-    margin:14px 0 0 !important;
-  }
-
-  /* Keep the premium CTA directly below the carousel */
-  .mobile-final-cta {
-    display:block !important;
-    padding-top:28px !important;
-  }
+  /* Keep the rest of the site usable below the mobile landing area. */
+  section{padding:48px 0}
+  .about-grid,.occ-grid,.step-grid,.rev-grid,.foot-grid,.row2{grid-template-columns:1fr!important}
+  .section-title{font-size:2rem;line-height:1.05}
 }
-
-/* Small phones */
-@media (max-width:390px) {
-  .mobile-collection-head {
-    padding:0 18px !important;
-  }
-  #collection .card {
-    flex-basis:152px !important;
-    width:152px !important;
-    height:250px !important;
-  }
-  #collection .card img {
-    height:175px !important;
-  }
+@media (max-width:390px){
+  .nav-inner{padding:0 12px!important}
+  .nav-inner .brand{max-width:43vw}
+  .brand h1{font-size:1.16rem!important}
+  .mobile-nav-quote{width:116px;font-size:.70rem}
+  body>.hero{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)!important;gap:10px!important;padding-left:14px!important;padding-right:14px!important}
+  body>.hero .display{font-size:1.72rem!important}
+  body>.hero .lead{font-size:.66rem!important}
+  body>.hero .hero-img{height:350px!important;border-radius:23px!important}
+  #collection .card{flex-basis:48vw!important;width:48vw!important;height:245px!important}
+  #collection .card img{height:46vw!important;min-height:140px!important}
 }
 </style>
 
@@ -625,7 +482,6 @@
         <h1>LUXERIS</h1>
         <p>Corporate gifting · Mumbai</p>
       </a>
-      <a class="mobile-nav-quote" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20need%20a%20corporate%20gifting%20quote." target="_blank" rel="noopener" aria-label="Get a quote on WhatsApp"><span class="mobile-wa-icon" aria-hidden="true">⌕</span> Get a Quote</a>
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#collection">Collection</a>
@@ -634,6 +490,7 @@
         <a href="tel:+919820810040">+91 98208 10040</a>
         <a class="btn btn-gold" href="#quote">Get a quote</a>
       </div>
+      <a class="mobile-nav-quote" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20need%20a%20corporate%20gifting%20quote." target="_blank" rel="noopener" aria-label="Get a quote on WhatsApp"><span aria-hidden="true">◔</span> Get a Quote</a>
       <button class="hamburger" id="menuBtn" aria-label="Open menu" type="button">
         <span></span><span></span><span></span>
       </button>
@@ -649,14 +506,7 @@
   </nav>
 
   <header class="wrap hero">
-    <div class="mobile-hero-copy">
-      <h2>Gifts that feel considered, not catalogue leftover.</h2>
-      <p>Executive sets, festive hampers and branded merchandise for companies that want gifts to feel considered. Customised, quoted clearly, and dispatched across India.</p>
-      <div class="mobile-hero-actions">
-        <a class="btn btn-gold" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20need%20a%20corporate%20gifting%20quote%20for%20Mumbai." target="_blank" rel="noopener" aria-label="WhatsApp LUXERIS for a quote"><span class="mobile-wa-symbol" aria-hidden="true">◉</span> WhatsApp us <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-    <div class="desktop-hero-copy">
+    <div>
       <h2 class="display">Gifts that feel considered, not catalogue leftover.</h2>
       <p class="lead">Executive sets, festive hampers and branded merchandise for companies that want gifts to feel considered. Customised, quoted clearly, and dispatched across India.</p>
       <div class="hero-actions">
@@ -671,12 +521,6 @@
     </div>
     <img class="hero-img" src="images/hero-hamper.jpg" alt="Premium wooden executive gift hamper with flask, notebook and preserves">
   </header>
-
-  <div class="mobile-benefits" aria-label="LUXERIS benefits">
-    <div><span class="benefit-icon" aria-hidden="true">♢</span><strong>Premium<br>Quality</strong></div>
-    <div><span class="benefit-icon" aria-hidden="true">▱</span><strong>Pan-India<br>Delivery</strong></div>
-    <div><span class="benefit-icon" aria-hidden="true">♙</span><strong>Bulk &amp; Corporate<br>Solutions</strong></div>
-  </div>
 
   <div class="strip">
     <span>Custom branding</span>
@@ -721,17 +565,12 @@
 
   <section id="collection">
     <div class="wrap">
-      <div class="mobile-collection-head">
-        <div>
-          <p class="section-kicker">Explore our gifting options</p>
-          <h2 class="section-title">Explore our gifting options</h2>
-        </div>
+      <div class="mobile-collection-head" aria-label="Gifting options">
+        <p class="section-kicker">Explore our gifting options</p>
         <a href="#collection" aria-label="See all gifting options">See all <span aria-hidden="true">→</span></a>
       </div>
-      <div class="desktop-collection-head">
-        <p class="section-kicker">Collection</p>
-        <h2 class="section-title">Get a quote. No cart, no guesswork.</h2>
-      </div>
+      <p class="section-kicker desktop-collection-kicker">Collection</p>
+      <h2 class="section-title">Get a quote. No cart, no guesswork.</h2>
       <p style="color:var(--muted);margin-top:10px;max-width:40rem">Prices depend on quantity, branding and finish. We quote after a short brief. Product photos include representative samples.</p>
       <div class="prod-grid">
         <article class="card mobile-order-sweets">
@@ -851,7 +690,13 @@
           </div>
         </article>
       </div>
-      <div class="mobile-carousel-dots" aria-label="Gifting options carousel"><button type="button" class="active" aria-label="Show Diwali Gifts"></button><button type="button" aria-label="Show Dry Fruits and Sweets"></button><button type="button" aria-label="Show Executive Gift Sets"></button><button type="button" aria-label="Show Customised Calendars"></button><button type="button" aria-label="Show Trophies and Mementos"></button></div>
+      <div class="mobile-carousel-dots" aria-label="Gifting options carousel">
+        <button type="button" class="active" aria-label="Show Diwali Gifts"></button>
+        <button type="button" aria-label="Show Dry Fruits and Sweets"></button>
+        <button type="button" aria-label="Show Executive Gift Sets"></button>
+        <button type="button" aria-label="Show Customised Calendars"></button>
+        <button type="button" aria-label="Show Trophies and Mementos"></button>
+      </div>
     </div>
   </section>
 
@@ -905,14 +750,6 @@
           <div class="who"><a href="/corporate-diwali-gifts-under-500.html" style="color:inherit;text-decoration:underline;text-underline-offset:3px">Read the guide →</a></div>
         </article>
       </div>
-    </div>
-  </section>
-
-  <section class="mobile-final-cta" aria-label="Custom corporate gifting requirement">
-    <div>
-      <span class="mobile-cta-icon" aria-hidden="true">•••</span>
-      <div><h2>Have a specific requirement?</h2><p>Tell us your requirement and we’ll suggest the right options.</p></div>
-      <a class="mobile-whatsapp-cta" href="https://wa.me/919820810040?text=Hello%20Luxeris%2C%20I%20have%20a%20specific%20corporate%20gifting%20requirement." target="_blank" rel="noopener">Chat on WhatsApp <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -1106,360 +943,43 @@
   </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const carousel = document.querySelector('#collection .prod-grid');
-  const dots = document.querySelectorAll('.mobile-carousel-dots button');
-  if (!carousel || !dots.length) return;
-  const mobileQuery = window.matchMedia('(max-width: 700px)');
-  let timer = null, paused = false;
-  const targets = ['.mobile-order-diwali','.mobile-order-sweets','.mobile-order-executive','.mobile-order-calendar','.mobile-order-trophies'];
-  function goTo(i) {
-    if (!mobileQuery.matches) return;
-    const card = carousel.querySelector(targets[i]);
-    if (!card) return;
-    carousel.scrollTo({left: card.offsetLeft - 14, behavior:'smooth'});
-    dots.forEach((d,n)=>d.classList.toggle('active', n===i));
+document.addEventListener('DOMContentLoaded', function(){
+  const track=document.querySelector('#collection .prod-grid');
+  const dots=[...document.querySelectorAll('.mobile-carousel-dots button')];
+  if(!track||!dots.length)return;
+  const mq=window.matchMedia('(max-width:700px)');
+  const selectors=['.mobile-order-diwali','.mobile-order-sweets','.mobile-order-executive','.mobile-order-calendar','.mobile-order-trophies'];
+  let index=0,timer=null,paused=false;
+  function go(i){
+    if(!mq.matches)return;
+    const card=track.querySelector(selectors[i]);
+    if(!card)return;
+    track.scrollTo({left:Math.max(0,card.offsetLeft-track.offsetLeft-16),behavior:'smooth'});
+    dots.forEach((d,n)=>d.classList.toggle('active',n===i));
+    index=i;
   }
-  dots.forEach((d,i)=>d.addEventListener('click',()=>{ paused=true; goTo(i); clearTimeout(timer); setTimeout(()=>paused=false,5000); }));
-  function start() {
+  function start(){
     clearInterval(timer);
-    if (!mobileQuery.matches) return;
-    let i=0;
-    timer=setInterval(()=>{ if (!paused) { i=(i+1)%targets.length; goTo(i); } }, 4200);
+    if(!mq.matches)return;
+    timer=setInterval(()=>{
+      if(paused)return;
+      go((index+1)%selectors.length);
+    },4000);
   }
-  carousel.addEventListener('touchstart',()=>{paused=true;},{passive:true});
-  carousel.addEventListener('touchend',()=>{clearTimeout(timer);setTimeout(()=>{paused=false;start();},3500);},{passive:true});
+  dots.forEach((d,i)=>d.addEventListener('click',()=>{paused=true;go(i);clearTimeout(d._resume);d._resume=setTimeout(()=>{paused=false;start()},3500)}));
+  ['touchstart','pointerdown'].forEach(e=>track.addEventListener(e,()=>{paused=true},{passive:true}));
+  ['touchend','pointerup'].forEach(e=>track.addEventListener(e,()=>{clearTimeout(track._resume);track._resume=setTimeout(()=>{paused=false;start()},3000)},{passive:true}));
+  track.addEventListener('scroll',()=>{
+    if(!mq.matches)return;
+    const left=track.scrollLeft+18;
+    let best=0,bestDist=Infinity;
+    selectors.forEach((sel,i)=>{const c=track.querySelector(sel);if(c){const dist=Math.abs(c.offsetLeft-track.offsetLeft-left);if(dist<bestDist){best=i;bestDist=dist}}});
+    dots.forEach((d,n)=>d.classList.toggle('active',n===best));
+  },{passive:true});
   start();
+  window.addEventListener('resize',start);
 });
 </script>
+
 </body>
 </html>
-
-<style>
-@media (max-width: 390px) {
-  .nav-inner .brand { max-width: 38vw; }
-  .brand h1 { font-size: 1.05rem; letter-spacing: .17em; }
-  .brand p { font-size: .36rem; letter-spacing: .08em; }
-  .mobile-nav-quote { width: 104px; font-size: .66rem; }
-  .hero { grid-template-columns: minmax(0,.98fr) minmax(0,1.02fr); gap:8px; }
-  .mobile-hero-copy h2 { font-size: 1.62rem; }
-  .mobile-hero-copy > p { font-size:.62rem; }
-  #collection .card { flex-basis: 126px; }
-}
-</style>
-
-
-<style>
-/* FINAL MOBILE REFERENCE MATCH — desktop is untouched */
-@media (max-width:700px) {
-  html, body { width:100%; max-width:100%; overflow-x:hidden; }
-  body { background:#fffdf8; }
-
-  /* Header: three clean zones, no logo/button overlap */
-  nav { background:#fffdf8; border-bottom:1px solid #e8dcc6; position:sticky; top:0; z-index:40; }
-  .nav-inner {
-    width:100% !important;
-    min-height:78px !important;
-    padding:0 12px;
-    display:grid !important;
-    grid-template-columns:52px minmax(0,1fr) 128px;
-    align-items:center;
-    gap:8px;
-  }
-  .nav-inner .brand {
-    position:static !important;
-    transform:none !important;
-    grid-column:2;
-    grid-row:1;
-    justify-self:center;
-    width:100%;
-    max-width:none !important;
-    text-align:center;
-    white-space:nowrap;
-  }
-  .brand h1 {
-    font-size:clamp(1.25rem,6vw,1.65rem) !important;
-    letter-spacing:.25em !important;
-    line-height:1 !important;
-  }
-  .brand p {
-    margin-top:5px !important;
-    font-size:.43rem !important;
-    letter-spacing:.14em !important;
-    white-space:nowrap;
-  }
-  .hamburger {
-    grid-column:1;
-    grid-row:1;
-    display:block !important;
-    width:52px !important;
-    height:52px !important;
-    border-radius:15px !important;
-    justify-self:start;
-  }
-  .hamburger span { width:27px !important; height:2px !important; margin:6px auto !important; }
-  .mobile-nav-quote {
-    grid-column:3;
-    grid-row:1;
-    width:128px !important;
-    min-height:48px !important;
-    justify-self:end;
-    padding:0 8px !important;
-    font-size:.74rem !important;
-    border-radius:999px !important;
-    letter-spacing:0;
-  }
-
-  /* Hero: compact two-column composition like the reference */
-  .hero {
-    width:100% !important;
-    padding:38px 20px 30px !important;
-    display:grid !important;
-    grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr) !important;
-    gap:14px !important;
-    align-items:center !important;
-    min-height:0 !important;
-    background:#fffdf8;
-  }
-  .desktop-hero-copy { display:none !important; }
-  .mobile-hero-copy {
-    display:flex !important;
-    flex-direction:column;
-    justify-content:center;
-    min-width:0;
-    padding:0 !important;
-  }
-  .mobile-hero-copy h2 {
-    font-family:"Cormorant Garamond",Georgia,serif !important;
-    font-weight:500 !important;
-    font-size:clamp(2.05rem,7.1vw,3.65rem) !important;
-    line-height:.94 !important;
-    letter-spacing:-.025em !important;
-    color:#1c1610;
-  }
-  .mobile-hero-copy > p {
-    margin-top:20px !important;
-    font-size:clamp(.78rem,2.15vw,1rem) !important;
-    line-height:1.48 !important;
-    color:#5c5348 !important;
-  }
-  .mobile-hero-actions { margin-top:20px !important; display:block !important; }
-  .mobile-hero-actions .btn {
-    width:100% !important;
-    min-height:58px !important;
-    padding:.8rem .7rem !important;
-    font-size:clamp(.78rem,2.3vw,1rem) !important;
-    white-space:nowrap !important;
-    gap:7px;
-  }
-  .mobile-wa-symbol {
-    font-size:.95rem;
-    line-height:1;
-    display:inline-block;
-  }
-  .hero-img {
-    width:100% !important;
-    height:clamp(330px,57vw,600px) !important;
-    min-height:0 !important;
-    max-height:none !important;
-    object-fit:cover !important;
-    object-position:center !important;
-    border-radius:28px !important;
-    box-shadow:0 16px 42px rgba(28,22,16,.10) !important;
-  }
-
-  /* Benefits: clean three-column band */
-  .mobile-benefits {
-    display:grid !important;
-    grid-template-columns:repeat(3,1fr) !important;
-    padding:28px 12px 30px !important;
-    background:#fff !important;
-    border-top:1px solid #e8dcc6 !important;
-    border-bottom:1px solid #e8dcc6 !important;
-  }
-  .mobile-benefits > div {
-    min-height:94px;
-    padding:0 8px !important;
-    gap:9px !important;
-  }
-  .benefit-icon {
-    width:42px !important;
-    height:42px !important;
-    font-size:2.25rem !important;
-    color:#8a6424 !important;
-  }
-  .mobile-benefits strong {
-    font-size:clamp(.68rem,2vw,.9rem) !important;
-    line-height:1.2 !important;
-    font-weight:500 !important;
-  }
-
-  /* Collection: reference-style heading + horizontal cards */
-  #collection {
-    padding:38px 0 20px !important;
-    background:#fffdf8;
-  }
-  #collection > .wrap {
-    width:100% !important;
-  }
-  .mobile-collection-head {
-    display:flex !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-    padding:0 22px !important;
-  }
-  .mobile-collection-head .section-kicker {
-    margin:0 !important;
-    font-size:clamp(.62rem,1.8vw,.82rem) !important;
-    letter-spacing:.22em !important;
-    color:#17324b !important;
-    text-transform:uppercase;
-  }
-  .mobile-collection-head .section-title { display:none !important; }
-  .mobile-collection-head > a {
-    font-size:clamp(.78rem,2.2vw,1rem) !important;
-    color:#8a6424 !important;
-    padding:0 !important;
-    white-space:nowrap;
-  }
-  #collection > .wrap > .desktop-collection-head,
-  #collection > .wrap > p:not(.mobile-carousel-note),
-  #collection > .wrap > .desktop-collection-head + p { display:none !important; }
-
-  #collection .prod-grid {
-    display:flex !important;
-    flex-wrap:nowrap !important;
-    width:100% !important;
-    overflow-x:auto !important;
-    overflow-y:hidden !important;
-    gap:12px !important;
-    margin:24px 0 0 !important;
-    padding:0 12px 10px !important;
-    scroll-snap-type:x mandatory !important;
-    scroll-padding-left:12px !important;
-    -webkit-overflow-scrolling:touch;
-    scrollbar-width:none;
-  }
-  #collection .prod-grid::-webkit-scrollbar { display:none; }
-  #collection .card {
-    flex:0 0 clamp(145px,22vw,224px) !important;
-    width:clamp(145px,22vw,224px) !important;
-    height:clamp(245px,38vw,355px) !important;
-    min-height:0 !important;
-    border-radius:16px !important;
-    overflow:hidden !important;
-    background:#fff !important;
-    box-shadow:0 8px 24px rgba(28,22,16,.08) !important;
-    scroll-snap-align:start !important;
-  }
-  #collection .card img {
-    width:100% !important;
-    height:clamp(170px,27.5vw,260px) !important;
-    padding:0 !important;
-    object-fit:cover !important;
-    display:block;
-  }
-  #collection .card .body {
-    padding:13px 12px !important;
-    min-height:0 !important;
-  }
-  #collection .mobile-card-title {
-    display:block !important;
-    font-family:inherit !important;
-    font-size:clamp(.86rem,2.2vw,1.05rem) !important;
-    line-height:1.08 !important;
-    font-weight:500 !important;
-    padding-right:42px !important;
-    color:#10263a !important;
-  }
-  #collection .mobile-card-arrow {
-    display:grid !important;
-    width:38px !important;
-    height:38px !important;
-    right:10px !important;
-    bottom:9px !important;
-    border:1px solid #b8893a !important;
-    color:#17324b !important;
-    font-size:1.25rem !important;
-    background:#fff !important;
-  }
-  #collection .mobile-order-diwali { order:1 !important; }
-  #collection .mobile-order-sweets { order:2 !important; }
-  #collection .mobile-order-executive { order:3 !important; }
-  #collection .mobile-order-calendar { order:4 !important; }
-  #collection .mobile-order-trophies { order:5 !important; }
-  #collection .mobile-carousel-dots {
-    display:flex !important;
-    justify-content:center !important;
-    gap:9px !important;
-    margin:13px 0 0 !important;
-  }
-  #collection .mobile-carousel-dots button {
-    width:9px !important;
-    height:9px !important;
-    padding:0 !important;
-  }
-  #collection .mobile-carousel-dots button.active {
-    width:10px !important;
-    height:10px !important;
-  }
-
-  /* Reference CTA directly after the carousel */
-  .mobile-final-cta {
-    display:block !important;
-    padding:28px 0 36px !important;
-    background:#fffdf8;
-  }
-  .mobile-final-cta > div {
-    width:calc(100% - 28px) !important;
-    margin:0 auto !important;
-    padding:24px 18px !important;
-    border-radius:24px !important;
-    display:grid !important;
-    grid-template-columns:48px 1fr !important;
-    gap:8px 12px !important;
-    background:#fbf4e9 !important;
-    border:1px solid #e8dcc6 !important;
-  }
-  .mobile-cta-icon {
-    width:44px !important;
-    height:44px !important;
-  }
-  .mobile-final-cta h2 {
-    font-size:clamp(1.45rem,5.5vw,2rem) !important;
-    line-height:1 !important;
-  }
-  .mobile-final-cta p {
-    font-size:clamp(.7rem,2.1vw,.88rem) !important;
-  }
-  .mobile-whatsapp-cta {
-    min-height:52px !important;
-    margin-top:10px !important;
-    font-size:clamp(.82rem,2.4vw,1rem) !important;
-  }
-
-  /* Keep the remaining desktop sections below the mobile reference block. */
-  body > #about,
-  body > #occasions,
-  body > #process,
-  body > .rev-grid,
-  body > #quote,
-  body > footer { order:10; }
-}
-
-@media (max-width:390px) {
-  .nav-inner { grid-template-columns:48px minmax(0,1fr) 112px; gap:5px; padding:0 8px; }
-  .hamburger { width:48px !important; height:48px !important; }
-  .mobile-nav-quote { width:112px !important; font-size:.67rem !important; }
-  .hero { padding:28px 14px 24px !important; gap:9px !important; }
-  .mobile-hero-copy h2 { font-size:1.82rem !important; }
-  .mobile-hero-copy > p { font-size:.66rem !important; margin-top:14px !important; }
-  .mobile-hero-actions { margin-top:14px !important; }
-  .mobile-hero-actions .btn { min-height:50px !important; font-size:.68rem !important; }
-  .hero-img { height:300px !important; border-radius:22px !important; }
-  #collection .prod-grid { gap:10px !important; padding-left:10px !important; padding-right:10px !important; }
-  #collection .card { flex-basis:136px !important; width:136px !important; height:225px !important; }
-  #collection .card img { height:158px !important; }
-  #collection .mobile-card-title { font-size:.82rem !important; }
-}
-</style>
