@@ -173,28 +173,54 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Corporate Umbrellas",
-    "name": "Corporate Umbrellas | LUXERIS",
-    "description": "Custom corporate umbrellas with logo branding for teams, events and promotional gifting.",
-    "url": "https://luxerisgifting.in/corporate-umbrellas.html",
-    "image": "https://luxerisgifting.in/images/umbrella.jpg",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Luxeris",
-      "telephone": "+91-98208-10040",
-      "email": "luxerisgifting@gmail.com",
-      "url": "https://luxerisgifting.in",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "3rd Bhoiwada Road, Bhuleshwar",
-        "addressLocality": "Mumbai",
-        "addressRegion": "Maharashtra",
-        "postalCode": "400002",
-        "addressCountry": "IN"
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://luxerisgifting.in/corporate-umbrellas.html#service",
+        "serviceType": "Corporate Umbrellas",
+        "name": "Corporate Umbrellas | LUXERIS",
+        "description": "Custom corporate umbrellas with logo branding for teams, events and promotional gifting.",
+        "url": "https://luxerisgifting.in/corporate-umbrellas.html",
+        "image": "https://luxerisgifting.in/images/umbrella.jpg",
+        "provider": {
+          "@id": "https://luxerisgifting.in/#localbusiness"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Mumbai"},
+          {"@type": "City", "name": "Navi Mumbai"},
+          {"@type": "City", "name": "Thane"},
+          {"@type": "Country", "name": "India"}
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://luxerisgifting.in/corporate-umbrellas.html#webpage",
+        "url": "https://luxerisgifting.in/corporate-umbrellas.html",
+        "name": "Corporate Umbrellas in Mumbai | Custom Logo Umbrellas | LUXERIS",
+        "description": "Luxeris provides custom corporate umbrellas in Mumbai with logo branding for teams, events and promotional gifting. Bulk orders and pan-India delivery.",
+        "about": {
+          "@id": "https://luxerisgifting.in/corporate-umbrellas.html#service"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://luxerisgifting.in/corporate-umbrellas.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "LUXERIS",
+            "item": "https://luxerisgifting.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Corporate Umbrellas",
+            "item": "https://luxerisgifting.in/corporate-umbrellas.html"
+          }
+        ]
       }
-    },
-    "areaServed": ["Mumbai", "Navi Mumbai", "Thane", "India"]
+    ]
   }
   </script>
 </head>
