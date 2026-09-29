@@ -857,10 +857,53 @@
     document.querySelectorAll('.prod-grid .card > img').forEach((img) => { img.addEventListener('click', () => openProduct(img)); img.setAttribute('role', 'button'); img.setAttribute('tabindex', '0'); img.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openProduct(img); } }); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeVideo(); closeProduct(); } });
     function sendQuote(e) {
-      e.preventDefault(); const name = document.getElementById('name').value.trim(); const company = document.getElementById('company').value.trim() || 'Not shared'; const phone = document.getElementById('phone').value.trim(); const email = document.getElementById('email').value.trim(); const occasion = document.getElementById('occasion').value || 'Not specified'; const product = document.getElementById('product').value.trim() || 'Not specified'; const details = document.getElementById('details').value.trim();
-      const text = ['New enquiry from luxerisgifting.in','','Name: ' + name,'Company: ' + company,'WhatsApp: ' + phone,'Email: ' + email,'Occasion: ' + occasion,'Product: ' + product,'','Details: ' + details].join('\n');
-      window.open('https://wa.me/919820810040?text=' + encodeURIComponent(text), '_blank');
-    }
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const company = document.getElementById('company').value.trim() || 'Not shared';
+  const phone = document.getElementById('phone').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const occasion = document.getElementById('occasion').value || 'Not specified';
+  const product = document.getElementById('product').value.trim() || 'Not specified';
+  const details = document.getElementById('details').value.trim();
+
+  const text = [
+    'New enquiry from luxerisgifting.in',
+    '',
+    'Name: ' + name,
+    'Company: ' + company,
+    'WhatsApp: ' + phone,
+    'Email: ' + email,
+    'Occasion: ' + occasion,
+    'Product: ' + product,
+    '',
+    'Details: ' + details
+  ].join('\n');
+
+  const sheetUrl = 'https://script.google.com/macros/s/AKfycbz2bhBBbKbMRrFRMDjXXIOmYIP7gbz4qRK0wF1PNVAKgzzFJZteTnTiAvFq-tCGg04/exec';
+
+  const leadData = new URLSearchParams({
+    name: name,
+    company: company,
+    whatsapp: phone,
+    email: email,
+    occasion: occasion,
+    product: product,
+    requirement: details
+  });
+
+  fetch(sheetUrl, {
+    method: 'POST',
+    mode: 'no-cors',
+    body: leadData,
+    keepalive: true
+  }).catch(() => {});
+
+  window.open(
+    'https://wa.me/919820810040?text=' + encodeURIComponent(text),
+    '_blank'
+  );
+}
   </script>
 </body>
 </html>
