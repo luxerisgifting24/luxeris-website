@@ -908,12 +908,9 @@
   const button = form.querySelector('button[type="submit"]');
 
   if (button) {
-    const originalText = button.textContent;
     button.textContent = 'Thank you! Your enquiry has been received. We’ll get back to you shortly.';
 
-    setTimeout(() => {
-      button.textContent = originalText;
-    }, 5000);
+    
   }
 }
   </script>
