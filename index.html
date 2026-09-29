@@ -858,7 +858,7 @@
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { closeVideo(); closeProduct(); } });
     function sendQuote(e) {
   e.preventDefault();
-
+  const form = e.target;
   const name = document.getElementById('name').value.trim();
   const company = document.getElementById('company').value.trim() || 'Not shared';
   const phone = document.getElementById('phone').value.trim();
@@ -903,6 +903,18 @@
     'https://wa.me/919820810040?text=' + encodeURIComponent(text),
     '_blank'
   );
+        form.reset();
+
+  const button = form.querySelector('button[type="submit"]');
+
+  if (button) {
+    const originalText = button.textContent;
+    button.textContent = 'Thank you! Your enquiry has been received. We’ll get back to you shortly.';
+
+    setTimeout(() => {
+      button.textContent = originalText;
+    }, 5000);
+  }
 }
   </script>
 </body>
