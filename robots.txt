@@ -25,7 +25,19 @@ Allow: /
 
 User-agent: CCBot
 Allow: /
+# OpenAI search crawler
+User-agent: OAI-SearchBot
+Allow: /
 
+# Anthropic AI crawlers
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
 Sitemap: https://luxerisgifting.in/sitemap.xml
 
 # LLM content map
